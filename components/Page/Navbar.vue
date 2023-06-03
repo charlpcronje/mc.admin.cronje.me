@@ -39,7 +39,7 @@ const menus = computed((): IMenuItem[] => [
           <Anchor
             class="underline font-bold"
             :text="$t('others.learn_more')"
-            href="https://github.com/charlpcronje""
+            href="https://github.com/charlpcronje"
           />
         </span>
       </div>
@@ -77,7 +77,7 @@ const menus = computed((): IMenuItem[] => [
           <ThemeSwitcher />
           <Anchor
             class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
-            href="https://github.com/charlpcronje"
+            href="https://github.com/charlpcronje/mc.admin.cronje.me"
             title="Github"
           >
             <IconMdi:github-face />

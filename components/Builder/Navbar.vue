@@ -87,9 +87,7 @@ const toggleOptions = (show?: boolean) => {
             >
               <span class="sr-only">home</span>
               <span class="flex items-center">
-                <IconSimpleIcons:nuxtdotjs
-                  class="inline-block mr-2 text-lg text-primary-500"
-                />
+                <img src="/img/ui/mallChatLogo1.png" class="mr-3" width="30" />
                 {{ app.name }}
               </span>
             </NuxtLink>

@@ -81,7 +81,7 @@ export default {
 
     // Controls
     const controls = new OrbitControls(camera, canvas)
-    controls.enableZoom = false
+    controls.enableZoom = true
     controls.target.set(0, 0.75, 0)
     controls.enableDamping = true
     controls.enablePan = false
@@ -129,14 +129,14 @@ export default {
 </script>
 
 <template>
-  <canvas class="webgl" :style="{ opacity: ready ? 1 : 0 }" />
+  <canvas class="webgl" :style="{ opacity: ready ? 0.1 : 0 }" />
 </template>
 
 <style scoped>
 .webgl {
   outline: none;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   opacity: 0;
   transition: opacity 1s ease;
 }

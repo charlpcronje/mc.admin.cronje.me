@@ -32,9 +32,24 @@ export default defineComponent({
   >
     <div class="flex-1 overflow-y-auto pl-4 lg:pl-0 pr-4 py-4">
       <ul>
-        <li v-for="i in 29" :key="i">
+        <li>
           <Anchor
-            :to="{ name: 'dashboard' }"
+            :to="{ name: 'malls' }"
+            class="group flex items-center mb-4 hover:no-underline"
+          >
+            <div
+              class="text-white dark:text-white group-hover:bg-sky-500 bg-sky-500 flex items-center mr-4 px-2 py-2 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:highlight-white/10"
+            >
+              <IconUil:apps class="text-xs" />
+            </div>
+            <span
+              class="text-sm font-semibold capitalize font-extrabold text-sky-500 dark:text-sky-400"
+            >
+              {{ $t('pages.malls.title') }}
+            </span>
+          </Anchor>
+          <Anchor
+            :to="{ name: 'malls' }"
             class="group flex items-center mb-4 hover:no-underline"
           >
             <div

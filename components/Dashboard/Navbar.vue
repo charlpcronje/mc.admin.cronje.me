@@ -18,8 +18,9 @@
           <ThemeSwitcher />
           <Anchor
             class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
-            href="https://github.com/charlpcronje/mc.admin.cronje.me"
+            href="https://github.com/charlpcronje"
             title="Github"
+            target="_blank"
           >
             <IconMdi:github-face />
           </Anchor>
