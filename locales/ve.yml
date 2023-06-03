@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: thoma vhakalelo
+  theme_switcher:
+    theme: tema
+    change_theme: thoma tema
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: fanela ha ita
+  blank:
+    nav: tshitshavhani
+    title: tshitshavhani tsha fhumbelo
+    description: iyi ndi tshitshavhani tsha fhumbelo
+    just_blank_page_with_title: tshitshavhani tsha fhumbelo na dzina
+  post:
+    nav: vhukuma
+    title: vhukuma
+    description: iyi ndi tshitshavhani tsha vhukuma
+  test:
+    nav: hwana
+    title: hwana
+    description: iyi ndi tshitshavhani tsha hwana
+    counter: hwana
+    increment: lambanya
+    decrement: lalatela
+    reset: fula
+    identity: dzina
+    full_name: dzina dzinene na dziṅwe
+  getting-started:
+    nav: kumisa
+    title: kumisa
+    description: iyi ndi tshitshavhani tsha kumisa
+  setting:
+    nav: vhathu
+    title: vhathu
+    description: iyi ndi tshitshavhani tsha vhathu
+    sections:
+      validate_username:
+        title: divha dza github
+        description: vhala dzina la wena la github u ita na u amba butoni u divha.
+        footer: Fambisa zwothe zwavhudi
+        footer_button: divha
+        footer_link: maikutlo a vhabvumedzi vha github
+      bot_id:
+        title: id ya bot
+        description: Iyi ndi id ya wena ya boti.
+        footer: Vhalelwa u ita zwifhinga zwa boti.
+      protection_spam:
+        title: vhathu ya spam
+        description: enda u thoma u nga si tshiṅwedzela tshiṅwe tsha mufiṅwe.
+        footer: u ri vhuthu, a tshiṅwe tsha wena tsha vhathu
+      advanced_enable_advanced:
+        title: thoma vhathu vha nthihi
+        description: u nga thoma vhathu vha nthihi u komba vhathu vha vhathu
+      advanced_dir_listing:
+        title: dzina la ndiriri
+        description: u nga tshiṅwedzela tshifanekiso tsha dzifayela tsha directory, dzi dzifayela dzothe vha kongola.
+  dashboard:
+    nav: tsalwa
+    title: tsalwa
+    index:
+      nav: nyumbu
+      title: nyumbu
+banners:
+  welcome: ndaṅedzwa, u amba vho %{app_name}!
+others:
+  learn_more: vomba zwothe
+  copy: kopisa
+  enabled: nthihi
+  disabled: itwa

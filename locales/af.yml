@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: verander_taal
+  theme_switcher:
+    theme: tema
+    change_theme: verander_tema
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: bladsy nie gevind nie
+  blank:
+    nav: leë
+    title: leë bladsy
+    description: dit is 'n leë bladsy
+    just_blank_page_with_title: net 'n leë bladsy met titel
+  post:
+    nav: pos
+    title: pos
+    description: dit is 'n posbladsy
+  test:
+    nav: toets
+    title: toets
+    description: dit is 'n toetsbladsy
+    counter: teller
+    increment: vermeerder
+    decrement: verminder
+    reset: stel terug
+    identity: identiteit
+    full_name: volle_naam
+  getting-started:
+    nav: aan die gang
+    title: aan die gang
+    description: dit is 'n aan die gang bladsy
+  setting:
+    nav: instelling
+    title: instelling
+    description: dit is 'n instelling bladsy
+    sections:
+      validate_username:
+        title: bevestig_github_profiel
+        description: tik jou github gebruikersnaam en klik die knoppie om te bevestig.
+        footer: Lees meer oor
+        footer_button: bevestig
+        footer_link: github gebruikers api
+      bot_id:
+        title: bot_identifikasie
+        description: Dit is jou bot ID.
+        footer: Gebruik wanneer jy met die bot kommunikeer.
+      protection_spam:
+        title: spam_beskerming
+        description: skakel aan om die rooi rand te verwyder
+        footer: as dit geaktiveer word, sal ons jou kommentaar teen spam beveilig
+      advanced_enable_advanced:
+        title: skakel_gevorderde_instellings_aan
+        description: jy kan gevorderde instellings aktiveer om die instellings te verander
+      advanced_dir_listing:
+        title: gids_lys
+        description: as daar geen indeks lêer teenwoordig is in 'n gids nie, sal die gidsinhoud vertoon word.
+  dashboard:
+    nav: paneel
+    title: paneel
+    index:
+      nav: tuis
+      title: tuis
+banners:
+  welcome: hallo, welkom by %{app_name}!
+others:
+  learn_more: leer meer
+  copy: kopieer
+  enabled: geaktiveer
+  disabled: gedeaktiveer

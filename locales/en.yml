@@ -63,6 +63,10 @@ pages:
     index:
       nav: home
       title: home
+  malls:
+    nav: malls
+    title: Shopping Malls
+  
 banners:
   welcome: hello, welcome to %{app_name}!
 others:

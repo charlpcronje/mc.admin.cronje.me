@@ -14,6 +14,46 @@ export const availableLocales: ILocales = {
     iso: 'en',
     flag: '🇺🇸',
   },
+  af: {
+    name: 'Afrikaans',
+    iso: 'af',
+    flag: '🇺🇸',
+  },
+  xh: {
+    name: 'Xhosa',
+    iso: 'xh',
+    flag: 'za',
+  },
+  zu: {
+    name: 'Zulu',
+    iso: 'zu',
+    flag: 'za',
+  },
+  nso: {
+    name: 'Sesotho sa Leboa',
+    iso: 'nso',
+    flag: 'za',
+  },
+  st: {
+    name: 'Sesotho',
+    iso: 'st',
+    flag: 'za',
+  },
+  ve: {
+    name: 'Venda',
+    iso: 've',
+    flag: 'za',
+  },
+  nr: {
+    name: 'isiNdebele',
+    iso: 'nr',
+    flag: 'za',
+  },
+  ts: {
+    name: 'Tsonga',
+    iso: 'ts',
+    flag: 'za',
+  },
   id: {
     name: 'Bahasa',
     iso: 'id',

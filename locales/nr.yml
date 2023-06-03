@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: guqula ulimi
+  theme_switcher:
+    theme: theme
+    change_theme: guqula theme
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: iphepha alifumaneke
+  blank:
+    nav: blanko
+    title: iphepha elifumaneke
+    description: leli phetha elifumaneke
+    just_blank_page_with_title: phetha elifumaneke ngezansi
+  post:
+    nav: iposti
+    title: iposti
+    description: leli phetha liyinhloko yeposti
+  test:
+    nav: isivivinyo
+    title: isivivinyo
+    description: leli phetha lingumsebenzi we-test
+    counter: ikhawunti
+    increment: bheka phambili
+    decrement: bheka emuva
+    reset: lungisa
+    identity: umlayezo
+    full_name: igama lesibili lelibi
+  getting-started:
+    nav: qala ukuphila
+    title: qala ukuphila
+    description: leli phetha linikela phambili ukuphila
+  setting:
+    nav: ukusetha
+    title: ukusetha
+    description: leli phetha linikela phambili ukusetha
+    sections:
+      validate_username:
+        title: qinisekisa ikheli le-github
+        description: qala ikheli le-github lakho faka ikheli le-github lakho faka ikheli le-github.
+        footer: Funda kuphela mayelana ne-
+        footer_button: qinisekisa
+        footer_link: api yabadlali be-github
+      bot_id:
+        title: id ye-bot
+        description: Leli yingxenye yendlela yokusebenza yeboti yakho.
+        footer: Inikwe uma usenza umsebenzi no-boti.
+      protection_spam:
+        title: ukugcina ngamabhokisi o-spam
+        description: hlobisa ukuthi kungabuyekeze ukugcina ukubamba isigqeba esikhulu
+        footer: uma kunikwe, sizokuncitsha amazwana akho o-spam
+      advanced_enable_advanced:
+        title: qinisekisa ukusetshenziswa kokusetshenziswa kokugcina
+        description: unganikwa ukusetshenziswa kokugcina kokugcina ukushintsha kokusetshenziswa
+      advanced_dir_listing:
+        title: ukubonakalisa kweminyaka
+        description: uma akukho ifayela yebhokisi eliyikhona phakathi kweminyaka, izinhlelo zebhokisi ziyakubonakala.
+  dashboard:
+    nav: ikhodi
+    title: ikhodi
+    index:
+      nav: ekhaya
+      title: ekhaya
+banners:
+  welcome: sawubona, wamukelekile ku %{app_name}!
+others:
+  learn_more: funda kabanzi
+  copy: kopisha
+  enabled: kugciniwe
+  disabled: kug

@@ -1,0 +1,73 @@
+components:
+  language_switcher:
+    change_language: shintsha ulimi
+  theme_switcher:
+    theme: isithomo
+    change_theme: shintsha isithomo
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: iphepha alikutholakali
+  blank:
+    nav: isihloko
+    title: iphepha elifushane
+    description: lokhu nguyilo indlela elifushane
+    just_blank_page_with_title: iphepha elifushane ngezwi kuphela
+  post:
+    nav: iphosi
+    title: iphosi
+    description: lokhu nguyilo iphepha leposi
+  test:
+    nav: isihloko
+    title: ukuxazulula
+    description: lokhu nguyilo iphepha lokuxazulula
+    counter: isihloko
+    increment: ukunyathela
+    decrement: ukunyathela kancane
+    reset: lungisa
+    identity: isibonelo
+    full_name: igama elifuthi
+  getting-started:
+    nav: ukufundiswa
+    title: ukufundiswa
+    description: lokhu nguyilo iphepha lokufundiswa
+  setting:
+    nav: ukusetha
+    title: ukusetha
+    description: lokhu nguyilo iphepha lokusetha
+    sections:
+      validate_username:
+        title: qinisekisa i-github profile
+        description: biza igama le-github yakho futhi guquza isinkiniseko.
+        footer: Funda kabanzi ngokuhamba kwakho
+        footer_button: qinisekisa
+        footer_link: i-github users api
+      bot_id:
+        title: idombolo ye-bot
+        description: Lokhu ngu-ID yebhoti yakho.
+        footer: Isebenziswe uma usheshayo le-bhoti.
+      protection_spam:
+        title: ukusekelwa kwe-spam
+        description: thebula ukuze ubeke isandla phakathi kwemibhobho emibomvu
+        footer: uma kuyakhishwa, sizothatha amathuluzi akho ezicaphunyweni zommenti
+      advanced_enable_advanced:
+        title: qinisekisa ukuvumela izilungiselelo ezinkulu
+        description: ungavumeli izilungiselelo ezinkulu ukuze ushintsha izilungiselelo
+      advanced_dir_listing:
+        title: ukuboniswa kwe-directory
+        description: uma akukhona ifayela ye-index kwangaphakathi kwedirekthri, izinhlelo zedirekthri zizoboniswa.
+  dashboard:
+    nav: isihloko
+    title: ibhodi selele
+    index:
+      nav: ekhaya
+      title: ekhaya
+banners:
+  welcome: sawubona, namuhla uyanemukela ku-%{app_name}!
+others:
+  learn_more: funda okuningi
+  copy: kopisha
+  enabled: kuvulwe
+  disabled: kufutshwe
+  

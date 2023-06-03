@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: fetola pego
+  theme_switcher:
+    theme: tema
+    change_theme: fetola tema
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: ikhasi e sa fumanehe
+  blank:
+    nav: tshupetso
+    title: ikhasi e fumanehang
+    description: lena ke ikhasi e fumanehang
+    just_blank_page_with_title: ikhasi e fumanehang ka tšohle tša letsoalo
+  post:
+    nav: poso
+    title: poso
+    description: lena ke ikhasi ea poso
+  test:
+    nav: khethoa
+    title: khethoa
+    description: lena ke ikhasi ea khethoa
+    counter: khethoa
+    increment: boletsa
+    decrement: boletsa ka ho fetela
+    reset: lokisa
+    identity: matšatši
+    full_name: leina le lefutso
+  getting-started:
+    nav: khetholla hloho
+    title: khetholla hloho
+    description: lena ke ikhasi ea khetholla hloho
+  setting:
+    nav: seta
+    title: seta
+    description: lena ke ikhasi ea seta
+    sections:
+      validate_username:
+        title: qala profaile ea github
+        description: kenya leina la hau la github le tšehetsoe ka mollo ea motsoako oa hau oa github.
+        footer: Ikarabe ka matlo a hao
+        footer_button: qala
+        footer_link: dikgopelo tsa batho ba fumanehang tsa github
+      bot_id:
+        title: ID ea bot
+        description: Haona ID ea bot oa hau.
+        footer: E sebediswa ha u khutlela le bot.
+      protection_spam:
+        title: phutheha spam
+        description: khiba phutheha ho ntša boitsebiso bo monate ba morao ha morao
+        footer: ha e khutlele, re tla u thusa ho sebetsoa boiphihlelo ba hau ka morao
+      advanced_enable_advanced:
+        title: khetha lietso tse khutšoane
+        description: o ka khetha lietso tse khutšoane ho fetola letsoalo
+      advanced_dir_listing:
+        title: kopa lietso la ditiriso
+        description: haeba ha ho na faele ea likaleng, dikhamphani tsa likaleng tša directory di fumanehang.
+  dashboard:
+    nav: tšhedi
+    title: tšhedi
+    index:
+      nav: ntlo
+      title: ntlo
+banners:
+  welcome: Lumela, amohela ho %{app_name}!
+others:
+  learn_more: bontša
+  copy: kopisa
+  enabled: ntseng
+  disabled: fumanehe

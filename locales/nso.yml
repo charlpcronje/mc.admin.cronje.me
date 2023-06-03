@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: fetola pego
+  theme_switcher:
+    theme: tema
+    change_theme: fetola tema
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: ikhasi e sa kgopelwa
+  blank:
+    nav: kgopelo
+    title: ikhasi ye kgopelwa
+    description: lena ke ikhasi ye kgopelwa
+    just_blank_page_with_title: ikhasi ye kgopelwa le pukuntšu ye e bego
+  post:
+    nav: poso
+    title: poso
+    description: lena ke ikhasi ya poso
+  test:
+    nav: kgopelo
+    title: kgopelo
+    description: lena ke ikhasi ya kgopelo
+    counter: kgopelo
+    increment: bolaya
+    decrement: boleta go feta
+    reset: phologa
+    identity: setšhaba
+    full_name: leina le lefuteng
+  getting-started:
+    nav: ka go leboga
+    title: ka go leboga
+    description: lena ke ikhasi ya ka go leboga
+  setting:
+    nav: setšhaba
+    title: setšhaba
+    description: lena ke ikhasi ya setšhaba
+    sections:
+      validate_username:
+        title: qala profaile ya github
+        description: kgaotša leina la gago la github le bolaetše mollo le mongwe le mongwe wa maikutlo.
+        footer: Ikarabešo ka tšhelete
+        footer_button: qala
+        footer_link: dikgopelo tša batho ba fumanehang tša github
+      bot_id:
+        title: ID ya bot
+        description: Ke ID ya gago ya bot.
+        footer: E ka sekgopela ka go dira diokobong tša bot.
+      protection_spam:
+        title: phutholola dihopo tša spam
+        description: ikgetha go phutholola go hwetša morago ka tšhweu ya dintho tša spam
+        footer: ge go hwetša, re tla go šetša maikgethelo a gago a di spam
+      advanced_enable_advanced:
+        title: fetola ditšhelete tša setšhaba tše kgopelago
+        description: o ka fetola ditšhelete tša setšhaba tše kgopelago go fetola ditšhelete
+      advanced_dir_listing:
+        title: loetselelo la dikirithara
+        description: ge e be e le dihirithara tše di sa na faele ya index ka gona, dikirithara tša directory di tla bohlokwa.
+  dashboard:
+    nav: tšhedi
+    title: tšhedi
+    index:
+      nav: lehae
+      title: lehae
+banners:
+  welcome: dumela, ikamelo go %{app_name}!
+others:
+  learn_more: bontša
+  copy: kopisa
+  enabled: a itlhakela
+  disabled:

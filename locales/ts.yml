@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: hlayisa xitsalwa
+  theme_switcher:
+    theme: tema
+    change_theme: hlayisa tema
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: xikombelo akufaneleki
+  blank:
+    nav: xikambelwankulu
+    title: xikambelo xin'we
+    description: loko i xikambelo xin'we
+    just_blank_page_with_title: xikambelo xin'we na mavonakaxikulu
+  post:
+    nav: hlayisa
+    title: hlayisa
+    description: loko i xikambelo xa hlayisa
+  test:
+    nav: xikambelo
+    title: xikambelo
+    description: loko i xikambelo xa ku hlayela
+    counter: xikombiso
+    increment: hlayisa kuya kutsi
+    decrement: hlayisa kuya ku nga tseni
+    reset: endza ku sungula
+    identity: nhloko
+    full_name: xihlovo lexin'we na mavonakaxikulu
+  getting-started:
+    nav: va sungula
+    title: va sungula
+    description: loko i xikambelo xa ku sungula
+  setting:
+    nav: tsaleka
+    title: tsaleka
+    description: loko i xikambelo xa ku tsaleka
+    sections:
+      validate_username:
+        title: xavisa github profayela
+        description: xavisa vito ra wena ra github na tshembiso xibuchwana u tlakusa.
+        footer: Fambisa ku pfuneta
+        footer_button: xavisa
+        footer_link: github users api
+      bot_id:
+        title: id ya boti
+        description: Loko i id ya wena ya boti.
+        footer: Ku sunguliwa loko ku humelela na boti.
+      protection_spam:
+        title: xikombelo xa spam
+        description: hlayisa ku hanya leswaku u hlayisa ku n'welela nhloko yiya yin'we.
+        footer: u hlayisa xikombelo xa wena ku nga spam
+      advanced_enable_advanced:
+        title: hlayisa vuxokoxoko bya mahumelelo
+        description: u hlayisa vuxokoxoko bya mahumelelo ku hlayisa vuxokoxoko
+      advanced_dir_listing:
+        title: ku tumbuluxa bya ndhawu
+        description: uma ku fanele ku va na fayela ra index eka ndhawu, vumundzuku bya ndhawu bya tumbuluxiwa.
+  dashboard:
+    nav: xikombiso
+    title: xikombiso
+    index:
+      nav: sweswi
+      title: sweswi
+banners:
+  welcome: avuxeni, u amba eka %{app_name}!
+others:
+  learn_more: xihundla ntsena
+  copy: hlambula
+  enabled: hlamusela
+  disabled: hlayisaka

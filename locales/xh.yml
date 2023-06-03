@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: guqula ulwimi
+  theme_switcher:
+    theme: isithomo
+    change_theme: guqula isithomo
+pages:
+  index:
+    title: Mall[]Chat[]Admin
+  404:
+    title: ukukhululwa kwamanani akutholakali
+  blank:
+    nav: isihloko
+    title: ikhasi elifushane
+    description: lokhu kuyindlela elifushane
+    just_blank_page_with_title: ikhasi elifushane ngezwi kuphela
+  post:
+    nav: iphosi
+    title: iphosi
+    description: lokhu kuyindlela yokuphosa iphosi
+  test:
+    nav: isihloko
+    title: ukuxhatshazwa
+    description: lokhu kuyindlela yokuxhatshazwa
+    counter: isihloko
+    increment: ukunyathelisa
+    decrement: ukunyathelisa kahle
+    reset: bamba'kuphele
+    identity: isibonisi
+    full_name: igama elifuthile
+  getting-started:
+    nav: ukushicilelwa
+    title: ukushicilelwa
+    description: lokhu kuyindlela yokushicilelwa
+  setting:
+    nav: ukusetha
+    title: ukusetha
+    description: lokhu kuyindlela yokusetha
+    sections:
+      validate_username:
+        title: qinisekisa i-github profile
+        description: biza igama le-github yakho futhi guquza isinkiniseko.
+        footer: Funda kabanzi ngokuhamba kwako
+        footer_button: qinisekisa
+        footer_link: i-github users api
+      bot_id:
+        title: idombolo ye-bot
+        description: Leli eliyisikhathi sakho se-bot.
+        footer: Siyisetshenziselwe uma sikwabelana nendoda.
+      protection_spam:
+        title: ukusekelwa kwesikhumba
+        description: gxalise ukwenza ukuthi ibhodwe elibomvu liphumelele
+        footer: uma li-enable siyothintela izimpendulo zakho ekhumbeni
+      advanced_enable_advanced:
+        title: phepha isethempelisini esincane
+        description: ungasebenzisa phepha isethempelisini esincane ukuze ubadilishe izilungiselelo
+      advanced_dir_listing:
+        title: ukulahlekelwa kwenyanga yabathengi
+        description: uma akukho ifayela ye-index kusuka emnyangweni, izinsiza zomnyango ziyakuboniswa.
+  dashboard:
+    nav: isihloko
+    title: isekhashi
+    index:
+      nav: ekhaya
+      title: ekhaya
+banners:
+  welcome: molo, welcomu kwi-%{app_name}!
+others:
+  learn_more: qaphelelwa kabanzi
+  copy: kopa
+  enabled: kuqhubekiswe
+  disabled: kugqitshwe
