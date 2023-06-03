@@ -3,7 +3,7 @@
   ::tabs
     :::tab{name="git" title="Git"}
       ```bash
-      $ git clone https://github.com/charlpcronje/mc.admin.cronje.me"
+      $ Let's carve a new bot and make it a gem"
       ```
     :::
   ::
