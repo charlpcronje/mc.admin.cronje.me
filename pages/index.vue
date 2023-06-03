@@ -72,7 +72,7 @@ const copyBash = () => {
               }; --end-color: ${item.endColor}; --animation-name: anim-fg-${
                 i + 1
               }`"
-              class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
+              class="animated-text-bg drop-shadow-xl text-7xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
             >
               <span class="animated-text-fg">{{ item.text }}</span>
             </span>
@@ -82,13 +82,13 @@ const copyBash = () => {
           >
             <Button
               size="lg"
-              text="Nuxt 3"
+              text="Sign In"
               class="font-extrabold"
               href="https://v3.nuxtjs.org"
             />
             <Button
               size="lg"
-              text="Github"
+              text="Meet the bots"
               type="secondary"
               class="font-extrabold"
               href="https://github.com/charlpcronje/mc.admin.cronje.me"
@@ -106,7 +106,9 @@ const copyBash = () => {
                 <div class="w-3 h-3 bg-green-500 rounded-full" />
                 <div class="w-3 h-3 bg-yellow-500 rounded-full" />
               </div>
-              <div class="flex-1 font-bold text-center pr-12 text-sm">BASH</div>
+              <div class="flex-1 font-bold text-center pr-12 text-sm">
+                Mall Chat Bots & Guides
+              </div>
               <div class="text-sm flex justify-center items-center">
                 <div class="tooltip">
                   <button
@@ -124,7 +126,26 @@ const copyBash = () => {
               class="win-body rounded-b-lg bg-gray-200/90 dark:bg-slate-800/90 px-3 py-2 font-mono backdrop-filter backdrop-blur-lg"
             >
               <div>
-                $ git clone https://github.com/charlpcronje/mc.admin.cronje.me
+                🗯 OUR LATEST BOT 💭
+                <br />
+                - All of the bots are very social and polite.
+                <br />
+                - Some have got a good sense of humour, like our new
+                <b>Movie Chat Bot</b>
+                <br />
+                <figure>
+                  <img
+                    align="left"
+                    style="height: 150px"
+                    src="/img/bots/trans/movieBot2.png"
+                  />
+                  <br />
+                  Enjoy a long entertaining chat with <b>Movie Bot Alpha</b> or
+                  jy <b>Alpha</b> if you'd like
+                  <figcaption></figcaption>
+                </figure>
+                <br />
+                <b>Sign In</b> to view read more
               </div>
             </div>
           </div>
