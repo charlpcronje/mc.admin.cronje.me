@@ -1,10 +1,10 @@
 {
-  "name": "Mall Chat Admin",
+  "name": "mall.chat.admin",
   "version": "0.1.0",
   "description": "a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Tailwindcss 3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/charlpcronje/mc.admin.cronje.me"
+    "url": "git://github.com/charlpcronje"
   },
   "author": "Charl Cronje",
   "license": "MIT",
@@ -24,8 +24,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
-    "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-conventional": "^17.2.0",
     "@headlessui/vue": "^1.7.8",
     "@iconify/json": "^2.1.135",
     "@intlify/nuxt3": "^0.2.4",
@@ -40,7 +38,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^3.2.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.2",
     "js-yaml": "^4.1.0",
     "lint-staged": "^13.0.3",
     "nuxt": "3.1.1",
@@ -67,5 +64,8 @@
     "**/*.{js,ts,vue,html}": [
       "pnpm lintfix"
     ]
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.5"
   }
 }
