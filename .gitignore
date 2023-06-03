@@ -16,3 +16,4 @@ dist
 .idea
 .vercel
 .vscode
+pnpm-lock.yaml
