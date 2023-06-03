@@ -18,7 +18,7 @@ useHead({
       content: 'Mall Chat Admin',
     },
   ],
-  link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
 })
 </script>
 
