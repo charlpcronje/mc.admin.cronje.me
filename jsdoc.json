@@ -1,0 +1,29 @@
+{
+    "source": {
+      "include": [
+        "composables",
+        "content",
+        "layouts",
+        "locales",
+        "pages",
+        "plugins",
+        "server",
+        "services",
+        "stores",
+        "tests",
+        "tools",
+        "utils"
+    ],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/|jsDocs)"
+    },
+    "plugins": ["plugins/markdown"],
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true
+    },
+    "opts": {
+      "recurse": true,
+      "destination": "./jsDocs/"
+    }
+  }
