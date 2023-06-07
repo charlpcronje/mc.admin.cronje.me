@@ -57,7 +57,7 @@ export default defineNuxtConfig({
 
   // app config
   app: {
-    // global transition
+  // global transition
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
   },
@@ -101,4 +101,20 @@ export default defineNuxtConfig({
       theme: 'github-dark',
     },
   },
+  
+  runtimeConfig: {
+    public: {
+      apiBase: '/api'
+    },
+    notionApiKey: process.env.NOTION_API_KEY,
+    notionDB:{
+      companies: process.env.NOTION_COMPANIES_DB,
+      regions: process.env.NOTION_REGIONS_DB,
+      cities: process.env.NOTION_CITIES_DB,
+      malls: process.env.NOTION_MALLS_DB,
+      users: process.env.NOTION_USERS_DB,
+      bots: process.env.NOTION_BOTS_DB,
+      art: process.env.NOTION_ART_DB
+    }
+  }
 })
