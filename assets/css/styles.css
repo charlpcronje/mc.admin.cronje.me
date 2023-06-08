@@ -1,0 +1,7 @@
+.drop-shadow img {
+    filter: drop-shadow(4px 4px 4px #0a0e18);
+    -webkit-filter: drop-shadow(4px 4px 4px #0a0e18);
+    -moz-filter: drop-shadow(4px 4px 4px #0a0e18);
+    -ms-filter: drop-shadow(4px 4px 4px #0a0e18);
+    -o-filter: drop-shadow(4px 4px 4px #0a0e18);
+}
