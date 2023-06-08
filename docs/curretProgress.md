@@ -7,13 +7,27 @@ I will be using `yarn` for this project and `npm` for global installs
 The best way to install `nuxt3` at the time of the document is to use the method below
 
 ```sh
-npx nuxi@latest init mall.chat.cronje.me
+npx nuxi@latest init mc.admin.cronje.me
 ```
 
 After that is done, install the dependencies
 
 ```sh
+npm install
+# or
 yarn
+# or
+pnpm install
+```
+
+Then run the project
+
+```sh
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
 ## 2. Started this documentation
@@ -42,17 +56,32 @@ I have written docs on the following topics so far
 I added some env variables:
 
 ```conf
-AUTH_DOMAIN=
-AUTH_CLIENT_ID=
-AUTH_CLIENT_SECRET=
+NOTION_API_KEY=
+# DB's
+NOTION_MALLS_DB=
+NOTION_ART_DB=
+NOTION_CITIES_DB=
+NOTION_REGIONS_DB=
+NOTION_BOTS_DB=
+NOTION_COMPANIES_DB=
+NOTION_USERS_DB=
 ```
 
-## Added Tailwind CSS
+## 5. Added Tailwind CSS
 
 First install te packages
 
 ```sh
 yarn add -D tailwindcss postcss autoprefixer
+# or
+npm install -D tailwindcss postcss autoprefixer
+# or
+pnpm add -D tailwindcss postcss autoprefixer
+```
+
+Then create the config file
+
+```sh
 npx tailwindcss init
 ```
 
@@ -126,41 +155,79 @@ Edit `app.vue` to test
 </template>
 ```
 
-## Added DaisyUI
-
-this one is simple
+## 6. Add @sidebase/nuxt-auth
 
 ```sh
-yarn add daisyui
+yarn add @sidebase/nuxt-auth
+# or
+npm install @sidebase/nuxt-auth
+# or
+pnpm add @sidebase/nuxt-auth
 ```
 
-Edit `tailwind.config.js`
+Add the module to `nuxt.config.ts`
 
-```js
-// Add daisyui to the plugins array
-plugins: [
-    require("daisyui")
-]
-```
+```ts
+// https://nuxt.com/docs/api/configuration-nuxt-config
 
-So at this time `tailwind.config.js` should look something like this
-
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue"
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require("daisyui")
+export default defineNuxtConfig({
+  modules: [
+    '@sidebase/nuxt-auth',
   ]
-}
+})
 ```
+
+Create file `server/api/auth/[...].ts`
+
+```ts
+import CredentialsProvider from 'next-auth/providers/credentials'
+import GithubProvider from 'next-auth/providers/github'
+import { NuxtAuthHandler } from "#auth";
+
+export default NuxtAuthHandler({
+    // secret needed to run nuxt-auth in production mode (used to encrypt data)
+    secret: process.env.NUXT_SECRET,
+    providers: [
+        // @ts-ignore Import is exported on .default during SSR, so we need to call it this way. May be fixed via Vite at some point
+        GithubProvider.default({
+            clientId: process.env.GITHUB_CLIENT_ID,
+            clientSecret: process.env.GITHUB_CLIENT_SECRET
+        }),
+        // @ts-ignore Import is exported on .default during SSR, so we need to call it this way. May be fixed via Vite at some point
+        CredentialsProvider.default({
+            // The name to display on the sign in form (e.g. 'Sign in with...')
+            name: 'Credentials',
+            // The credentials is used to generate a suitable form on the sign in page.
+            // You can specify whatever fields you are expecting to be submitted.
+            // e.g. domain, username, password, 2FA token, etc.
+            // You can pass any HTML attribute to the <input> tag through the object.
+            credentials: {
+              username: { label: 'Username', type: 'text', placeholder: '(hint: jsmith)' },
+              password: { label: 'Password', type: 'password', placeholder: '(hint: hunter2)' }
+            },
+            authorize (credentials: any) {
+              // You need to provide your own logic here that takes the credentials
+              // submitted and returns either a object representing a user or value
+              // that is false/null if the credentials are invalid.
+              // NOTE: THE BELOW LOGIC IS NOT SAFE OR PROPER FOR AUTHENTICATION!
+
+              const user = { id: '1', name: 'J Smith', username: 'jsmith', password: 'hunter2', image: 'https://avatars.githubusercontent.com/u/25911230?v=4' }
+
+              if (credentials?.username === user.username && credentials?.password === user.password) {
+                // Any object returned will be saved in `user` property of the JWT
+                return user
+              } else {
+                // eslint-disable-next-line no-console
+                console.error('Warning: Malicious login attempt registered, bad credentials provided')
+
+                // If you return null then an error will be displayed advising the user to check their details.
+                return null
+
+                // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
+              }
+            }
+        })
+    ]
+})
+```
+

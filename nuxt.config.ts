@@ -13,7 +13,11 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: ['~/assets/sass/vendor.scss', '~/assets/sass/app.scss'],
+  css: [
+    '~/assets/sass/vendor.scss',
+    '~/assets/sass/app.scss',
+    '~/assets/css/styles.css'
+  ],
 
   // plugins
   plugins: ['~/plugins/navbar.ts'],
@@ -25,12 +29,13 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
+    '@sidebase/nuxt-auth',
     'unplugin-icons/nuxt',
     '@intlify/nuxt3',
     '@pinia/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-windicss',
+    'nuxt-windicss'
   ],
 
   // experimental features
