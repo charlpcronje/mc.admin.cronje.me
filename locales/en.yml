@@ -18,6 +18,10 @@ pages:
     nav: post
     title: post
     description: this is a post page
+  login:
+    nav: login
+    title: login
+    description: Sign in below
   test:
     nav: test
     title: testing
@@ -64,8 +68,15 @@ pages:
       nav: home
       title: home
   malls:
-    nav: malls
+    nav: Shopping Malls
     title: Shopping Malls
+    description: this is a malls page
+  bots:
+    nav: Chat Bots
+    title: Chat Bots
+  notes:
+    nav: notes
+    title: Notes
   
 banners:
   welcome: hello, welcome to %{app_name}!
@@ -74,3 +85,16 @@ others:
   copy: copy
   enabled: enabled
   disabled: disabled
+auth:
+  signIn: Sign In
+  signOut: Sign Out
+  signUp: Sign Up
+  forgotPassword: Forgot Password
+  resetPassword: Reset Password
+  email: Email
+  password: Password
+  username: Username
+  fullName: Full Name
+  confirmPassword: Confirm Password
+  currentPassword: Current Password
+  newPassword: New Password
