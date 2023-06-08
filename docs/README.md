@@ -46,6 +46,7 @@
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
+- [x] 🔏 [@sidebase/nuxt-auth](https://sidebase.io/nuxt-auth)
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR]
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
