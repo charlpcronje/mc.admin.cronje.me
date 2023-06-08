@@ -29,7 +29,6 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
-    '@sidebase/nuxt-auth',
     'unplugin-icons/nuxt',
     '@intlify/nuxt3',
     '@pinia/nuxt',
@@ -37,6 +36,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-windicss'
   ],
+
+  imports: {
+    dirs: ['./stores'],
+  },
 
   // experimental features
   experimental: {
@@ -111,6 +114,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     },
+    secretKey: process.env.SECRET_KEY,
     notionApiKey: process.env.NOTION_API_KEY,
     notionDB:{
       companies: process.env.NOTION_COMPANIES_DB,
