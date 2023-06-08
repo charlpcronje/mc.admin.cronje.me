@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-definePageMeta({
-  layout: 'dashboard',
-})
-</script>
-
 <template>
   <PageWrapper>
     <PageHeader>
@@ -24,9 +18,9 @@ definePageMeta({
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr v-for="item in results" :key="item.id">
               <td class="img"></td>
-              <td></td>
+              <td>{{ item.properties.Title.title[0].text.content }}</td>
               <td></td>
               <td></td>
               <td></td>
@@ -36,7 +30,31 @@ definePageMeta({
           </tbody>
         </table>
       </PageSection>
-      <PageSection> </PageSection>
     </PageBody>
   </PageWrapper>
 </template>
+
+<script lang="ts" setup>  
+import { useNotionDatabase } from '@/services/notion.js'
+import { capitalize } from '~/utils/str'
+import LoginPage from '@/components/LoginPage.vue'
+// composable
+const { t } = useLang()
+
+// compiler macro
+definePageMeta({
+  layout: 'page',
+})
+useHead(() => ({
+  title: capitalize(t('pages.malls.title')),
+  meta: [
+    {
+      name: 'description',
+      content: t('pages.malls.description'),
+    },
+  ],
+}))
+
+const results:any[] = [];
+
+</script>
