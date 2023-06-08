@@ -17,6 +17,7 @@ dist
 .vercel
 .vscode
 pnpm-lock.yaml
+package-lock.json
 
 # jsDocs
 jsDocs
