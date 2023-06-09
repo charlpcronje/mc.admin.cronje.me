@@ -1,5 +1,3 @@
-
-
 <template>
   <PageWrapper>
     <PageHeader>

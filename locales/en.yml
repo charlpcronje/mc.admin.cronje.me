@@ -64,9 +64,7 @@ pages:
   dashboard:
     nav: dashboard
     title: dashboard
-    index:
-      nav: home
-      title: home
+    description: Chat Bot Overview
   malls:
     nav: Shopping Malls
     title: Shopping Malls
@@ -77,7 +75,18 @@ pages:
   notes:
     nav: notes
     title: Notes
-  
+  meetTheBots:
+    nav: Meet the Bots
+    title: Meet the Bots
+    description: Welcome, your hub for chat bots in shopping malls. Explore how intelligent virtual assistants can enhance customer engagement, streamline operations, and boost sales. Discover the power of chat bots in transforming the shopping experience and stay ahead in the ever-evolving retail landscape.
+  features:
+    nav: features
+    title: Features
+    description: this is a features page
+  demo:
+    nav: Demo Chat
+    title: Demo Chat
+    description: this is a demo page
 banners:
   welcome: hello, welcome to %{app_name}!
 others:
@@ -88,13 +97,3 @@ others:
 auth:
   signIn: Sign In
   signOut: Sign Out
-  signUp: Sign Up
-  forgotPassword: Forgot Password
-  resetPassword: Reset Password
-  email: Email
-  password: Password
-  username: Username
-  fullName: Full Name
-  confirmPassword: Confirm Password
-  currentPassword: Current Password
-  newPassword: New Password

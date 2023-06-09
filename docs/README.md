@@ -12,6 +12,7 @@
 
 - [Getting Started](./gettingStarted.md)
 - [Current Progress](./curretProgress.md)
+- [Themes](./themes.md)
 
 ### Notion API and SDK
 - [Notion API](./notionAPI.md)

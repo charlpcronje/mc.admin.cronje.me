@@ -7,10 +7,10 @@ export default defineNuxtConfig({
   ssr: true,
 
   // typescripts
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
+  // typescript: {
+  //   strict: true,
+  //   typeCheck: true,
+  // },
 
   // css
   css: [
@@ -40,14 +40,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['./stores'],
   },
-
-  // experimental features
-  experimental: {
-    reactivityTransform: false,
-  },
-
-  // auto import components
-  components: true,
 
   // vite plugins
   vite: {
@@ -82,7 +74,7 @@ export default defineNuxtConfig({
 
   // vueuse
   vueuse: {
-    ssrHandlers: true,
+    ssrHandlers: false,
   },
 
   // windicss

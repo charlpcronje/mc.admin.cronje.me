@@ -155,79 +155,159 @@ Edit `app.vue` to test
 </template>
 ```
 
-## 6. Add @sidebase/nuxt-auth
+## 6. Create custom Authentication
+
+I will be using `Pinia` and `jsonwebtoken`
+
+- Install Pinia
 
 ```sh
-yarn add @sidebase/nuxt-auth
+npm i @pinia/nuxt
 # or
-npm install @sidebase/nuxt-auth
+yarn add @pinia/nuxt
 # or
-pnpm add @sidebase/nuxt-auth
+pnpm add @pinia/nuxt
 ```
 
-Add the module to `nuxt.config.ts`
+- Update `nuxt.config.ts`
 
 ```ts
-// https://nuxt.com/docs/api/configuration-nuxt-config
-
 export default defineNuxtConfig({
-  modules: [
-    '@sidebase/nuxt-auth',
-  ]
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: ['@pinia/nuxt'],
 })
 ```
 
-Create file `server/api/auth/[...].ts`
+- Create `~/store/auth.ts`
 
 ```ts
-import CredentialsProvider from 'next-auth/providers/credentials'
-import GithubProvider from 'next-auth/providers/github'
-import { NuxtAuthHandler } from "#auth";
+// store/auth.ts
+import { error } from 'console';
+import { defineStore } from 'pinia';
+import jwt from 'jsonwebtoken';
+const config = useRuntimeConfig();
+const { Client } = require('@notionhq/client');
+const notion = new Client({ auth: config.notionApiKey });
+const dbId = config.notionDB.users;
 
-export default NuxtAuthHandler({
-    // secret needed to run nuxt-auth in production mode (used to encrypt data)
-    secret: process.env.NUXT_SECRET,
-    providers: [
-        // @ts-ignore Import is exported on .default during SSR, so we need to call it this way. May be fixed via Vite at some point
-        GithubProvider.default({
-            clientId: process.env.GITHUB_CLIENT_ID,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET
-        }),
-        // @ts-ignore Import is exported on .default during SSR, so we need to call it this way. May be fixed via Vite at some point
-        CredentialsProvider.default({
-            // The name to display on the sign in form (e.g. 'Sign in with...')
-            name: 'Credentials',
-            // The credentials is used to generate a suitable form on the sign in page.
-            // You can specify whatever fields you are expecting to be submitted.
-            // e.g. domain, username, password, 2FA token, etc.
-            // You can pass any HTML attribute to the <input> tag through the object.
-            credentials: {
-              username: { label: 'Username', type: 'text', placeholder: '(hint: jsmith)' },
-              password: { label: 'Password', type: 'password', placeholder: '(hint: hunter2)' }
-            },
-            authorize (credentials: any) {
-              // You need to provide your own logic here that takes the credentials
-              // submitted and returns either a object representing a user or value
-              // that is false/null if the credentials are invalid.
-              // NOTE: THE BELOW LOGIC IS NOT SAFE OR PROPER FOR AUTHENTICATION!
+interface UserI {
+    id: string;
+    avatar?: string;
+    fullName?: string;
+    email: string;
+    password: string;
+    company?: string;
+    roles?: string[];
+}
 
-              const user = { id: '1', name: 'J Smith', username: 'jsmith', password: 'hunter2', image: 'https://avatars.githubusercontent.com/u/25911230?v=4' }
 
-              if (credentials?.username === user.username && credentials?.password === user.password) {
-                // Any object returned will be saved in `user` property of the JWT
-                return user
-              } else {
-                // eslint-disable-next-line no-console
-                console.error('Warning: Malicious login attempt registered, bad credentials provided')
+export const useAuthStore = defineStore('auth', {
+    state: () => ({
+        authenticated: false,
+        loading: false,
+    }),
+    actions: {
+        async authenticateUser(payload : UserI) {
+            const response = await notion.databases.query({
+                database_id: config.notionDB.users,
+                filter: {
+                    and: [
+                        {
+                            property: "Email Address",
+                            email: {
+                                equals: payload.email
+                            }
+                        },
+                        {
+                            property: "Password",
+                            rich_text: {
+                                equals: payload.password
+                            }
+                        }
+                    ]
+                }
+            });
 
-                // If you return null then an error will be displayed advising the user to check their details.
-                return null
+            // Extract the person's details from the response
+            if (response.results.length > 0) {
+                // Create and sign the token
+                const token = jwt.sign({ username: payload.email }, config.secretKey, {
+                    expiresIn: '1h',
+                });
+        
+                // Save the token in a cookie
+                const tokenCookie = useCookie('token');
+                tokenCookie.value = token;
+                this.authenticated = true;
 
-                // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
-              }
+                const data = response.results[0];
+
+                // Get the avatar image URL
+                const avatar = data.properties.Avatar.files[0].external.url;
+
+                // Get the company page ID
+                const companyId = data.properties.Company.relation[0].id;
+
+                // Get the company page details
+                const companyPage = await notion.pages.retrieve(companyId);
+
+                // Get the company name
+                const companyName = companyPage.properties.Name.title[0].plain_text;
+
+                // Map the Notion row to a new Person object
+                const user:UserI = {
+                    id: data.id,
+                    avatar: avatar,
+                    fullName: data.properties["Full Name"].title[0].plain_text,
+                    email: data.properties["Email Address"].email,
+                    password: data.properties.Password.rich_text[0].plain_text,
+                    company: companyName
+                };
+            } else {
+                con
             }
-        })
-    ]
-})
+        },
+        logUserOut() {
+            const token = useCookie('token');
+            this.authenticated = false;
+            token.value = null;
+        },
+    },
+});
 ```
 
+- Create `~/middleware/auth.global.ts`, because it's got the word `global` added to the file name the middleware will be applied to all routes, so below I am excluding the login and home page from the middleware by adding those two routes to `excludedRoutes` constant
+
+```ts
+// middleware/auth.global.ts
+import { useAuthStore } from '~/store/auth';
+import jwt from 'jsonwebtoken';
+const config = useRuntimeConfig();
+import { useRouter } from 'vue-router';
+
+export const useAuthMiddleware = () => {
+    const auth = useAuthStore();
+    const router = useRouter();
+    const token = useCookie('token');
+    const excludedRoutes = ['/login', '/'];
+
+    // Check if the current route is in the excludedRoutes array
+    if (excludedRoutes.includes(router.currentRoute.value.path)) {
+        return;
+    }
+
+    try {
+        // Verify the token
+        jwt.verify(token.value!, config.secretKey);
+        auth.authenticated = true;
+    } catch (err) {
+        // If the token is invalid or expired, set authenticated to false and remove the token
+        auth.authenticated = false;
+        token.value = null;
+    }
+
+    if (!auth.authenticated) {
+        router.push('/login');
+    }
+};
+```

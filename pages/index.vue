@@ -1,28 +1,27 @@
 <script lang="ts" setup>
-// composable
-const { t } = useLang()
-
-// meta
 definePageMeta({
-  layout: 'page'
+  layout: 'page',
+  auth: {
+    unauthenticatedOnly: false,
+    navigateAuthenticatedTo: '/dashboard  ',
+  },
 })
 
-// vars
+//Fetch user data from the Notion
+const { data } = await useFetch('/api/user.get.ts');
+const { t } = useLang()
 const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
-const leadingsText = computed(() => [
-  {
+const leadingsText = computed(() => [{
     text: titlesText.value[0],
     startColor: '#007CF0',
     endColor: '#00DFD8',
     delay: 0
-  },
-  {
+  },{
     text: titlesText.value[1],
     startColor: '#7928CA',
     endColor: '#FF0080',
     delay: 2
-  },
-  {
+  },{
     text: titlesText.value[2],
     startColor: '#FF4D4D',
     endColor: '#F9CB28',
@@ -93,7 +92,7 @@ const copyBash = () => {
               text="Meet the bots"
               type="secondary"
               class="font-extrabold"
-              href="https://github.com/charlpcronje/mc.admin.cronje.me"/>
+              href="/demo"/>
           </div>
         </div>
         <div class="hidden md:flex md:w-3/8 justify-center items-end relative">
@@ -139,7 +138,7 @@ const copyBash = () => {
                   />
                   <br />
                   Enjoy a long entertaining chat with <b>Movie Bot Alpha</b> or
-                  jy <b>Alpha</b> if you'd like
+                  just <b>Alpha</b> if you'd like
                   <figcaption></figcaption>
                 </figure>
                 <br />

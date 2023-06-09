@@ -1,31 +1,28 @@
 // middleware/auth.ts
 import { useAuthStore } from '~/store/auth';
 import jwt from 'jsonwebtoken';
-const config = useRuntimeConfig();
-import { useRouter } from 'vue-router';
 
-export const useAuthMiddleware = () => {
+export default defineNuxtRouteMiddleware((to, from) => {
     const auth = useAuthStore();
-    const router = useRouter();
     const token = useCookie('token');
     const excludedRoutes = ['/login', '/'];
 
     // Check if the current route is in the excludedRoutes array
-    if (excludedRoutes.includes(router.currentRoute.value.path)) {
-        return;
+    if (excludedRoutes.includes(to.path) || to.name === 'login' || to.name === 'index') {
+        return true
     }
 
     try {
         // Verify the token
-        jwt.verify(token.value!, config.secretKey);
+        jwt.verify(token.value!, process.env.SECRET_KEY!);
         auth.authenticated = true;
     } catch (err) {
         // If the token is invalid or expired, set authenticated to false and remove the token
         auth.authenticated = false;
         token.value = null;
     }
-
+    
     if (!auth.authenticated) {
-        router.push('/login');
+        return navigateTo('/login')
     }
-};
+  })

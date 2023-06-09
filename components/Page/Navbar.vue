@@ -1,16 +1,9 @@
 <script lang="ts" setup>
+import { useAuthStore } from '~/store/auth';
 import { AppConfigInput } from '@nuxt/schema'
 
-const { status, signIn, signOut } = useAuth();
-const loggedIn = computed(() => status.value === 'authenticated');
-  
-
-async function handleSignIn() {
-  //await signIn();
-}
-async function handleSignOut() {
-  //await signOut();
-}
+const auth = useAuthStore();
+const loggedIn = auth.$state.authenticated;
 
 
 export interface IMenuItem {
@@ -25,13 +18,13 @@ const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
-    text: t('pages.malls.nav'),
-    route: { name: 'malls' },
+    text: t('pages.meetTheBots.nav'),
+    route: { name: 'meetTheBots' },
   },
-  { type: 'link', text: t('pages.notes.nav'), route: { name: 'notes' }},
-  /*{ type: 'link', text: t('pages.test.nav'), route: { name: 'test' }},*/
-    { type: 'link', text: t('pages.post.nav'), route: { name: 'post' }},
-    { type: 'link', text: t('pages.setting.nav'), route: { name: 'setting'}},
+  { type: 'link', text: t('pages.features.nav'), route: { name: 'features' }},
+  /*{ type: 'link', text: t('pages.test.nav'), route: { name: 'test' }},
+    { type: 'link', text: t('pages.post.nav'), route: { name: 'post' }},*/
+    { type: 'link', text: t('pages.demo.nav'), route: { name: 'demo'}},
   {
     type: 'button',
     text: (loggedIn) ? t('auth.signOut') :  t('auth.signIn'),
