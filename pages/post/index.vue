@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
 
+definePageMeta({
+  layout: 'dashboard',
+  middleware: ["guest-only"]
+})
+
+
 // composable
 const { t } = useLang()
 

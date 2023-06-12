@@ -1,16 +1,30 @@
 <script lang="ts" setup>
-import { useAuthStore } from '~/store/auth';
 import { AppConfigInput } from '@nuxt/schema'
-
-const auth = useAuthStore();
-const loggedIn = auth.$state.authenticated;
-
-
 export interface IMenuItem {
   type: 'link' | 'button'
   text: string
   href?: any
   route?: any
+}
+
+const currentUser = useAuthUser();
+const isAdmin = useAdmin();
+const { logout } = useAuth();
+
+const form = reactive({
+    pending: false,
+});
+
+async function onLogoutClick() {
+    try {
+        form.pending = true;
+        await logout();
+        await navigateTo("/");
+    } catch (error) {
+        console.error(error);
+    } finally {
+        form.pending = false;
+    }
 }
 
 const { t } = useLang()
@@ -27,7 +41,7 @@ const menus = computed((): IMenuItem[] => [
     { type: 'link', text: t('pages.demo.nav'), route: { name: 'demo'}},
   {
     type: 'button',
-    text: (loggedIn) ? t('auth.signOut') :  t('auth.signIn'),
+    text: (currentUser) ? t('auth.signOut') :  t('auth.signIn'),
     route: { name: 'login' },
   },
 ])

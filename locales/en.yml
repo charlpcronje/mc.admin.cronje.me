@@ -9,6 +9,10 @@ pages:
     title: Mall[]Chat[]Admin
   404:
     title: page not found
+  account:
+    nav: account
+    title: account
+    description: this is a account page
   blank:
     nav: blank
     title: blank page
@@ -87,6 +91,18 @@ pages:
     nav: Demo Chat
     title: Demo Chat
     description: this is a demo page
+  contactUs:
+    nav: Contact Us
+    title: Contact Us
+    description: this is a Contact Us page
+  guest:
+    nav: Guest Page
+    title: Guest Page
+    description: this is the guest
+  private:
+    nav: Private Page
+    title: Private Page
+    description: this is the Private
 banners:
   welcome: hello, welcome to %{app_name}!
 others:

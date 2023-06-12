@@ -1,8 +1,8 @@
 import { Client } from "@notionhq/client";
-const config = useRuntimeConfig();
+import type { User } from "~~/types";
 
-const notion = new Client({ auth: config.notionApiKey });
-const DB = config.notionDB.users;
+const notion = new Client({ auth: process.env.NOTION_API_KEY! });
+const DB = process.env.NOTION_USERS_DB!;
 
 let payload = [];
 

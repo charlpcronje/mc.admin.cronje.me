@@ -77,7 +77,8 @@ export default defineEventHandler(async (event) => {
         email: body.email,
         password: body.password
     }
+    const email = body.email;
     const result = await getUserDetailsFromNotion(user);
-    const token: string = jwt.sign({ result.email }, process.env.SECRET_KEY!);
+    const token: string = jwt.sign({ email }, process.env.SECRET_KEY!);
     return token;
 });

@@ -37,7 +37,13 @@
 <script lang="ts" setup>  
 import { useNotionDatabase } from '@/services/notion.js'
 import { capitalize } from '~/utils/str'
-import LoginPage from '@/components/LoginPage.vue'
+
+definePageMeta({
+  layout: 'dashboard',
+  middleware: ["user-only"]
+})
+const currentUser = useAuthUser();
+
 // composable
 const { t } = useLang()
 

@@ -106,6 +106,11 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     },
+    cookieName: process.env.COOKIE_NAME || "__session",
+    cookieSecret: process.env.COOKIE_SECRET || "secret",
+    cookieExpires: parseInt(process.env.COOKIE_REMEMBER_ME_EXPIRES || ONE_DAY.toString(), 10), // 1 day
+    cookieRememberMeExpires: parseInt(process.env.COOKIE_REMEMBER_ME_EXPIRES || ONE_WEEK.toString(), 10), // 7 days
+
     secretKey: process.env.SECRET_KEY,
     notionApiKey: process.env.NOTION_API_KEY,
     notionDB:{

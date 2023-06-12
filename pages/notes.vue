@@ -1,5 +1,3 @@
-
-
 <template>
   <PageWrapper>
     <PageHeader>
@@ -7,7 +5,7 @@
     </PageHeader>
     <PageBody>
       <PageSection>
-        <LoginPage/>  
+        <div>notes</div>  
       </PageSection>
     </PageBody>
   </PageWrapper>

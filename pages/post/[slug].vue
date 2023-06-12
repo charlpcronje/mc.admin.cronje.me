@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: 'page',
+  middleware: ["guest-only"]
 })
+
 </script>
 
 <template>

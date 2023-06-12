@@ -1,7 +1,27 @@
 <script lang="ts" setup>
+import { capitalize } from '~/utils/str'
+definePageMeta({
+  layout: 'dashboard',
+  middleware: ["user-only"]
+})
+const currentUser = useAuthUser();
+
+// composable
+const { t } = useLang()
+
+// compiler macro
 definePageMeta({
   layout: 'dashboard',
 })
+useHead(() => ({
+  title: capitalize(t('pages.dashboard.title')),
+  meta: [
+    {
+      name: 'description',
+      content: t('pages.dashboard.description'),
+    },
+  ],
+}))
 </script>
 
 <template>
@@ -18,9 +38,7 @@ definePageMeta({
         </p>
       </PageSection>
       <PageSection>
-        <div v-for="i in 30" :key="i" class="text-6xl uppercase">
-          {{ $t('pages.blank.just_blank_page_with_title') }}
-        </div>
+        <PageUser :user="currentUser" />
       </PageSection>
     </PageBody>
   </PageWrapper>

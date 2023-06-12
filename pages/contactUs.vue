@@ -1,11 +1,11 @@
 <template>
   <PageWrapper>
     <PageHeader>
-      <PageTitle :text="$t('pages.demo.title')" class="capitalize" />
+      <PageTitle :text="$t('pages.contactUs.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
       <PageSection>
-        <div>Chat Bot Demo</div>
+        <div>Contact Us Page</div>
       </PageSection>
     </PageBody>
   </PageWrapper>
@@ -21,12 +21,11 @@ definePageMeta({
   layout: 'page',
 })
 useHead(() => ({
-  title: capitalize(t('pages.demo.title')),
-  meta: [
-    {
+  title: capitalize(t('pages.contactUs.title')),
+  meta: [{
       name: 'description',
-      content: t('pages.demo.description'),
-    },
-  ],
+      content: t('pages.contactUs.description'),
+    }
+  ]
 }))
 </script>

@@ -17,6 +17,7 @@
 ### Notion API and SDK
 - [Notion API](./notionAPI.md)
 - [Notion URL and CMS](./notionAsCMS.md)
+- [Notion API DB Responses](./notionApiDB.md)
 - [Authentication with Nuxt DB and JWT](./notionAuth.md)
 - [Notion Database Reference]./(notionDBRef.md)
 

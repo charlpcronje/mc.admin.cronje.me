@@ -8,7 +8,7 @@
       "nuxt-windicss",
       "@vueuse/nuxt",
       "@pinia/nuxt",
-      "unplugin-icons/types/vue"
+      //"unplugin-icons/types/vue"
     ],
     "typeRoots": [
       "./node_modules/@types"
