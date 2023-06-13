@@ -92,7 +92,7 @@ const copyBash = () => {
               text="Meet the bots"
               type="secondary"
               class="font-extrabold"
-              href="/demo"/>
+              href="/meetTheBots"/>
           </div>
         </div>
         <div class="hidden md:flex md:w-3/8 justify-center items-end relative">

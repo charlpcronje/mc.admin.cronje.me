@@ -1,16 +1,17 @@
 import { Client } from "@notionhq/client";
-import type { User } from "~~/types";
+import type { NotionApiResponse, User } from "~~/types";
 import { mapNotionApiResponseToUser } from "~/utils/notion/mapUsers";
+import { AnyAaaaRecord } from "dns";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_USERS_DB!;
 
 export async function getUsers() {
-    const data:any = await notion.databases.query({
+    
+    const userData = await notion.databases.query({
         database_id: DB
     });
-
-    return mapNotionApiResponseToUser(data.response);
+    return mapNotionApiResponseToUser(userData);
 }
 
 
@@ -24,10 +25,10 @@ export async function getUserByEmail(email: string) {
             },
         },
     });
-    return mapNotionApiResponseToUser(data.response);
+    return mapNotionApiResponseToUser(data)[0];
 }
 
-export async function getUserByEmailAndPassword(email: string, password:string):Promise<User | User[]> {
+export async function getUserByEmailAndPassword(email: string, password:string):Promise<User> {
     const data:any = await notion.databases.query({
         database_id: DB,
         filter: {
@@ -46,22 +47,20 @@ export async function getUserByEmailAndPassword(email: string, password:string):
         }
     });
     
-    const user = mapNotionApiResponseToUser(data.response);
-    console.log("user",{user});
-    return user;
+    return mapNotionApiResponseToUser(data.results)[0];
 }
 
-export async function getUserById(id: string) {
+export async function getUserById(id: number) {
     const data:any = await notion.databases.query({
         database_id: DB,
         filter: {
-            property: 'id',
-            rich_text: {
+            property: 'ID',
+            number: {
                 equals: id,
             },
         },
     });
-    return mapNotionApiResponseToUser(data.response);
+    return mapNotionApiResponseToUser(data.results)[0];
 }
 
 export async function isAdmin(user?: User) {

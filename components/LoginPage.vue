@@ -18,9 +18,7 @@ async function onLoginClick() {
     try {
         form.error = "";
         form.pending = true;
-console.log(form.data.email);
         await login(form.data.email,form.data.password,form.data.rememberMe);
-
         emit("success");
     } catch (error: any) {
         if (error.data.message) form.error = error.data.message;

@@ -13,23 +13,32 @@ export default defineEventHandler(async (event) => {
     }
 
     const userWithPassword = await getUserByEmailAndPassword(email,password);
-    console.log("userWithPassword",{userWithPassword});
+    
     if (!userWithPassword) {
         return createError({
             statusCode: 401,
-            message: "Bad credentials",
+            message: "Bad credentials"
         });
     }
 
+    if (!userWithPassword.status) {
+        return createError({
+            statusCode: 401,
+            message: "User Deactivated"
+        });
+    }
+
+    /* When passwords will be encrypted for now the 
+    password is verified by filtering on email and password from notion
     const verified = await verify(password, userWithPassword.password);
 
-    if (!verified) {
+    if (!verified || userWithPassword) {
         return createError({
             statusCode: 401,
             message: "Bad credentials",
         });
     }
-
+    */
     const config = useRuntimeConfig();
 
     const session = serialize({ userId: userWithPassword.id });

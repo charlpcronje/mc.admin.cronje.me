@@ -5,7 +5,7 @@
     </PageHeader>
     <PageBody>
       <PageSection>
-        <LoginPage/>  
+        <LoginPage @success="onLoginSuccess"/>  
       </PageSection>
     </PageBody>
   </PageWrapper>
@@ -20,7 +20,9 @@ const { t } = useLang()
 // compiler macro
 definePageMeta({
   layout: 'page',
+  middleware: ["guest-only"]
 })
+
 useHead(() => ({
   title: capitalize(t('pages.login.title')),
   meta: [
@@ -30,4 +32,15 @@ useHead(() => ({
     },
   ],
 }))
+
+const currentUser = useAuthUser();
+const isAdmin = useAdmin();
+
+
+
+async function onLoginSuccess() {
+    const redirect = isAdmin.value ? "/admin" : "/private";
+
+    await navigateTo(redirect);
+}
 </script>
