@@ -19,6 +19,7 @@ declare module 'nuxt/config' {
     vueuse?: VueUseNuxtOptions
     windicss?: NuxtWindiCssModuleOptions
     content?: Partial<NuxtContentModuleOptions>
+    image?: any
   }
 }
 

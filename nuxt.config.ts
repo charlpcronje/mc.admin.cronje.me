@@ -34,7 +34,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-windicss'
+    'nuxt-windicss',
+    '@nuxt/image'
   ],
 
   imports: {
@@ -84,7 +85,7 @@ export default defineNuxtConfig({
         interpretUtilities: false,
       },
       server: {
-        port: 4000,
+        port: 5000,
         open: false,
       },
     },
@@ -100,6 +101,19 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'github-dark',
     },
+  },
+
+  image: {
+    domains: ['amazonaws.com'],
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'jpg',
+          width: 50,
+          height: 50
+        }
+      }
+    }
   },
   
   runtimeConfig: {
