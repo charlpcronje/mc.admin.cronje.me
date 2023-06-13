@@ -81,7 +81,7 @@ pages:
     title: Notes
   meetTheBots:
     nav: Meet the Bots
-    title: Meet the Bots
+    title: Meet[]the[]Bots
     description: Welcome, your hub for chat bots in shopping malls. Explore how intelligent virtual assistants can enhance customer engagement, streamline operations, and boost sales. Discover the power of chat bots in transforming the shopping experience and stay ahead in the ever-evolving retail landscape.
   features:
     nav: features
@@ -89,7 +89,7 @@ pages:
     description: this is a features page
   demo:
     nav: Demo Chat
-    title: Demo Chat
+    title: Meet[]The[]Bots
     description: this is a demo page
   contactUs:
     nav: Contact Us
@@ -103,6 +103,10 @@ pages:
     nav: Private Page
     title: Private Page
     description: this is the Private
+  admin:
+    nav: Users
+    title: Admin Section
+    description: This is for the system admin only
 banners:
   welcome: hello, welcome to %{app_name}!
 others:

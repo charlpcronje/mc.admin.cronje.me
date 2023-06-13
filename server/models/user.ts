@@ -1,6 +1,6 @@
 import { Client } from "@notionhq/client";
 import type { NotionApiResponse, User } from "~~/types";
-import { mapNotionApiResponseToUser } from "~/utils/notion/mapUsers";
+import { mapNotionApiResponseToUser } from "~~/server/utils/mapUsers";
 import { AnyAaaaRecord } from "dns";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });

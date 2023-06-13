@@ -3,9 +3,9 @@ import type { NotionApiResponse, User } from "~~/types";
 import { mapNotionApiResponseToUser } from "~~/server/utils/mapUsers";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
-const DB = process.env.NOTION_USERS_DB!;
+const DB = process.env.NOTION_BOTS_DB!;
 
-import { getUsers, isAdmin } from "~/server/models/user";
+import { isAdmin } from "~/server/models/user";
 
 export default defineEventHandler(async (event) => {
     if (!isAdmin(event.context.user)) {
@@ -18,9 +18,8 @@ export default defineEventHandler(async (event) => {
     const userData = await notion.databases.query({
         database_id: DB
     });
-    return mapNotionApiResponseToUser(userData.results);
+    const usersWithPassword =  mapNotionApiResponseToUser(userData.results);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const usersWithoutPassword = usersWithPassword.map(({ password, ...user }) => user);
-    //console.log({usersWithoutPassword   });
-    //return usersWithoutPassword;
+    return usersWithoutPassword;
 });
