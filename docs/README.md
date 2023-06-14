@@ -14,6 +14,18 @@
 - [Current Progress](./curretProgress.md)
 - [Themes](./themes.md)
 
+
+### TODO
+- [Implement Pinia Persistance ](https://nuxt.com/modules/pinia-plugin-persistedstate)
+- [Implement Nuxt-Viewport Module](https://nuxt.com/modules/nuxt-viewport)
+- [Implement nuxt-session](https://nuxt.com/modules/session)
+- [Monaco Editor Code Editor](https://microsoft.github.io/monaco-editor/)
+- [nuxt-ssr-lit](https://nuxt.com/modules/ssr-lit)
+
+### Code Snippets
+- [User Authentication](./userAuth.md)
+
+
 ### Notion API and SDK
 - [Notion API](./notionAPI.md)
 - [Notion URL and CMS](./notionAsCMS.md)
@@ -26,6 +38,10 @@
 - [Load custom .env file](./customenv.md)
 - [Tailwind CSS Cheat Sheet](https://flowbite.com/tools/tailwind-cheat-sheet)
 - [Pinia Store](./piniaStore.md)
+- [Nuxt Icon Docs](./nuxtIcon.md)
+  - [Nuxt Icons](https://icones.js.org)
+- [Element Plus Nuxt](./elementPlusNuxt.md)
+- [Nuxt Viewport](./nuxtViewPort.md)
 
 ### Data
 - [City Data - back4app](./cityData.md)
@@ -160,7 +176,7 @@ Theme Setting have 4 options :
 - `realtime` (realtime theme, if 05:00 - 17:00, it will change to light theme, otherwise dark)
 
 We have state `theme.current`, this state return `light` or `dark` theme. basically it's process from `theme.setting`.
-dont change theme with this state.
+don't change theme with this state.
 ### Localization
 Localization is a plugin that allows you to switch between languages. this lib in :
 
