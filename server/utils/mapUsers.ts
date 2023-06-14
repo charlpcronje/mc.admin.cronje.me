@@ -1,6 +1,9 @@
-import type { NotionApiResponse, User } from "~~/types";
+import type { NotionApiResponse,NotionApiResultsResponse, User } from "~~/types";
 
-export function mapNotionApiResponseToUser(response: NotionApiResponse[]): User[] {
+export function mapNotionApiResponseToUser(response: NotionApiResponse[] | NotionApiResultsResponse): User[] {
+  if (response.results) {
+    response = response.results;
+  }
   const users: User[] = [];
   response.forEach((notionResponse) => {
       const {

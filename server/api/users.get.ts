@@ -14,13 +14,8 @@ export default defineEventHandler(async (event) => {
             message: "You don't have the rights to access this resource",
         });
     }
+    const usersWithPassword = await getUsers();
 
-    const userData = await notion.databases.query({
-        database_id: DB
-    });
-    return mapNotionApiResponseToUser(userData.results);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const usersWithoutPassword = usersWithPassword.map(({ password, ...user }) => user);
-    //console.log({usersWithoutPassword   });
-    //return usersWithoutPassword;
 });
