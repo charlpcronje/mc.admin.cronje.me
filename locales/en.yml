@@ -6,7 +6,7 @@ components:
     change_theme: change theme
 pages:
   index:
-    title: Mall[]Chat[]Admin
+    title: Mall[]Chat[]Bots
   404:
     title: page not found
   account:
