@@ -20,6 +20,8 @@ declare module 'nuxt/config' {
     windicss?: NuxtWindiCssModuleOptions
     content?: Partial<NuxtContentModuleOptions>
     image?: any
+    elementPlus?: any
+    devtools?: any
   }
 }
 

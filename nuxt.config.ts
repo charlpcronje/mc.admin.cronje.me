@@ -31,12 +31,35 @@ export default defineNuxtConfig({
   modules: [
     'unplugin-icons/nuxt',
     '@intlify/nuxt3',
-    '@pinia/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-icon',
+    '@element-plus/nuxt',
+    '@nuxt/devtools',
   ],
+  devtools: {
+    // Enable devtools (default: true)
+    enabled: true,
+    // VS Code Server options
+    vscode: {
+      VSCodeIntegrationOptions : {
+        enabled: true,
+        startOnBoot: false,
+        port: 3080,
+        reuseExistingServer: true,
+        mode: 'local-serve', // 'local-serve' or 'remote-ssh'
+        tunnel: {
+            name: 'my-vscode-server',
+        }
+      }
+    }
+  },
+
+  elementPlus: { 
+    /** Options */ 
+  },
 
   imports: {
     dirs: ['./stores'],
