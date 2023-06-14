@@ -42,7 +42,7 @@ export interface Bot {
 
 export interface City {
     id: number;
-    city: string;
+    cityName: string;
     country?: string;
     population?: number;
     capital?: string;
