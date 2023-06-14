@@ -868,4 +868,67 @@ export function useNotionDatabase(databaseId) {
 }
 ```
 
-## 7. 
+## 7. Add `nuxt-icon` to the project
+
+```sh
+yarn add --dev nuxt-icon
+#or
+npm install --save-dev nuxt-icon
+#or
+pnpm add --save-dev nuxt-icon
+```
+
+- `nuxt.config.ts`
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+    buildModules: [
+
+        "nuxt-icon",
+    ],
+});
+```
+
+[Docs on Nuxt Icon ](nuxtIcon.md);
+
+## 8. Element Plus Nuxt Module
+
+```sh
+yarn add element-plus @element-plus/nuxt -D
+#or
+npm i element-plus @element-plus/nuxt -D
+#or
+pnpm add element-plus @element-plus/nuxt -D
+```
+
+- `nuxt.config.ts`
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@element-plus/nuxt'
+  ],
+  elementPlus: { /** Options */ }
+})
+```
+
+Add `elementPlus` in `global.d.ts` to avoid typescript error
+
+```ts
+// global.d.ts
+import type { NuxtConfig } from '@nuxt/types'
+
+declare module 'nuxt/config' {
+  interface NuxtConfig {
+    // element plus module options, it should bo be any, but it works
+    elementPlus?: any
+  }
+}
+```
+[Docs on elementPlus](./elementPlusNuxt.md);
+
+
+
+
