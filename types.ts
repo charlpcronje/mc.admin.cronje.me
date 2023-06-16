@@ -1,33 +1,31 @@
-export interface NotionApiResponse {
-    // JSON response structure from the Notion API
-    // Define only the necessary properties for mapping
-    id: string;
-    properties: {
-        [key: string]: {
-            [key: string]: any;
-        };
-    };
-}
-
 export interface NotionApiResultsResponse {
     // JSON response structure from the Notion API
     // Define only the necessary properties for mapping
     results: NotionApiResponse[]
 }
 
-export interface User {
+export interface pageProperties { 
+    [key: string]: {
+        [key: string | number]: any | any[];
+    };
+}
+
+export interface NotionApiResponse {
+    properties: pageProperties;
+}
+
+export type UserI = {
     id: number;
     status: boolean;
     avatar?: string;
     fullName?: string;
-    email: string;
+    emailAddress: string;
     password: string;
     company?: string;
     roles: string[];
 }
 
-
-export interface Bot {
+export interface BotI {
     id: number;
     status: boolean;
     avatar?: string;
@@ -40,7 +38,7 @@ export interface Bot {
     ShoppingMalls?: string | string[]
 }
 
-export interface City {
+export interface CityI {
     id: number;
     cityName: string;
     country?: string;
@@ -52,4 +50,38 @@ export interface City {
     shoppingMalls?: string | string[];
 }
 
-export type UserWithoutPassword = Omit<User, "password">;
+export interface PageI {
+    object: string;
+    id: string;
+    created_time: Date;
+    last_edited_time: Date;
+    created_by: { 
+        object: 'user';
+        id: string;
+    }
+    last_edited_by: { 
+        object: 'user';
+        id: string;
+    }
+    cover?: string | null;
+    icon?: string | null;
+    parent?: {
+        type: 'database_id';
+        database_id: string;
+    } 
+    archived?: boolean;
+    properties?: UserI | BotI | CityI | any;
+    url?: string;
+    public_url?: string | null;
+}    
+
+export interface ListI {
+    object: 'list';
+    results: PageI[];
+    next_cursor: string | null;
+    has_more: boolean
+    type: 'page' | 'list';
+    page: {}
+}
+
+export type UserWithoutPassword = Omit<PageI["properties"], "password">;
