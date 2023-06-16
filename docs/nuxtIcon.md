@@ -30,8 +30,7 @@ export default defineNuxtConfig({
 
 That's it, you can now use the `<Icon />` in your components!
 
-✨ If you are using VS Code, you can use the [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) extension by [@antfu](https://github.com/antfu)
-
+✨ If you are using VS Code, you can use the [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)
 ## [Usage 👌](https://nuxt.com/modules/icon#usage)
 
 **Props:**
@@ -41,7 +40,7 @@ That's it, you can now use the `<Icon />` in your components!
 
 **Attributes**:
 
-When using an icone from Iconify, an `<svg>` will be created, you can give [all the attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) of the native element.
+When using an icon from Iconify, an `<svg>` will be created, you can give [all the attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) of the native element.
 
 ```vue
 <Icon name="uil:github" color="black" />

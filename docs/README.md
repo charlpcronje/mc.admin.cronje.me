@@ -10,6 +10,7 @@
 ```
 > Mall Chat Bot Generator
 
+- [Presentation](./presentation.md)
 - [Getting Started](./gettingStarted.md)
 - [Current Progress](./curretProgress.md)
 - [Themes](./themes.md)
@@ -43,6 +44,7 @@
   - [Nuxt Icons](https://icones.js.org)
 - [Element Plus Nuxt](./elementPlusNuxt.md)
 - [Nuxt Viewport](./nuxtViewPort.md)
+- [Nuxt ChatGPT](./nuxtChatGPT.md)
 
 ### Data
 - [City Data - back4app](./cityData.md)
