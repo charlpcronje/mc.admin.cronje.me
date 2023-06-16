@@ -1,9 +1,10 @@
-import type { NotionApiResultsResponse, NotionApiResponse, City } from "~~/types";
+import type { PageI, ListI } from "~~/types";
+import { City } from "~~/objects";
 
 export function mapNotionApiResponseToBot(response: NotionApiResponse[] | NotionApiResultsResponse): City[] {
-  if (response.results) {
+  if ('results' in response) {
     response = response.results;
-  }
+  } 
   
   const cities: City[] = [];
   response.forEach((notionResponse) => {
