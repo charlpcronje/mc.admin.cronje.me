@@ -1,7 +1,7 @@
-import { PageI } from './types';
+import { PageI } from '../server/utils/types';
 
 /**
- * 
+ * This is the base class for all Notion objects.
  */
 export class Page implements PageI {
     object?: string;
