@@ -47,6 +47,10 @@
 - [Nuxt Viewport](./nuxtViewPort.md)
 - [Nuxt ChatGPT](./nuxtChatGPT.md)
 
+### Microsoft Clarity
+- [What is Clarity](./clarity/README.md)
+- [Getting Started](./clarity/gettingStarted.md)
+
 ### Data
 - [City Data - back4app](./cityData.md)
 

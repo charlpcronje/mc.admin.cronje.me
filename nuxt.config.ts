@@ -2,7 +2,18 @@ import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// @ts-ignore
 export default defineNuxtConfig({
+  head: {
+    script: [
+      {
+        hid: 'clarity',
+        src: 'https://www.clarity.ms/tag/hla1pbbh65',
+        async: true,
+      },
+    ],
+  },
+
   // server side rendering mode
   ssr: true,
 
