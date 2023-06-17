@@ -1,6 +1,6 @@
 import { Client } from "@notionhq/client";
-import type { NotionApiResponse, Bot } from "~~/types";
-import { mapNotionApiResponseToBot } from "~~/server/utils/mapBots";
+import { Bot } from "~~/server/utils/objects";
+import { mapNotionToBot } from "~~/server/utils/mapBots";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_BOTS_DB!;
@@ -18,8 +18,6 @@ export default defineEventHandler(async (event) => {
     const data:any = await notion.databases.query({
         database_id: DB
     });
-    const usersWithPassword = mapNotionApiResponseToBot(data);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const usersWithoutPassword = usersWithPassword.map(({ password, ...user }) => user);
-    return usersWithoutPassword;
+    const bots: Bot[] = mapNotionToBot(data);
+    return bots;
 });

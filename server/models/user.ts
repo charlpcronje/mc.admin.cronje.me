@@ -1,16 +1,15 @@
 import { Client } from "@notionhq/client";
-import type { NotionApiResponse, User } from "~~/types";
-import { mapNotionApiResponseToUser } from "~~/server/utils/mapUsers";
+import { User } from "~/server/utils/objects";
+import { mapNotionToUser } from "~~/server/utils/mapUsers";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_USERS_DB!;
 
 export async function getUsers():Promise<User[]> {
-    
     const data:any = await notion.databases.query({
         database_id: DB
     });
-    return mapNotionApiResponseToUser(data);
+    return mapNotionToUser(data);
 }
 
 
@@ -24,7 +23,7 @@ export async function getUserByEmail(email: string) {
             },
         },
     });
-    return mapNotionApiResponseToUser(data)[0];
+    return mapNotionToUser(data)[0];
 }
 
 export async function getUserByEmailAndPassword(email: string, password:string):Promise<User> {
@@ -45,8 +44,7 @@ export async function getUserByEmailAndPassword(email: string, password:string):
             ],
         }
     });
-    
-    return mapNotionApiResponseToUser(data.results)[0];
+    return mapNotionToUser(data.results)[0];
 }
 
 export async function getUserById(id: number) {
@@ -59,32 +57,32 @@ export async function getUserById(id: number) {
             },
         },
     });
-    return mapNotionApiResponseToUser(data.results)[0];
+    return mapNotionToUser(data.results)[0];
 }
 
 export async function isAdmin(user?: User) {
-    return user && user.roles.includes("Admin");
+    return user && user.properties.roles.includes("Admin");
 }
 
 export async function isManager(user?: User) {
-    return user && user.roles.includes("Manager");
+    return user && user.properties.roles.includes("Manager");
 }
 
 export async function isAgent(user?: User) {
-    return user && user.roles.includes("Agent");
+    return user && user.properties.roles.includes("Agent");
 }
 
 export async function isClient(user?: User) {
-    return user && user.roles.includes("Client");
+    return user && user.properties.roles.includes("Client");
 }
 
 export async function isUser(user?: User) {
-    return user && user.roles.includes("User");
+    return user && user.properties.roles.includes("User");
 }
 
 export async function isGuest(user?: User) {
     const rolesToCheck = ['Admin', 'Manager', 'User', 'Agent'];
-    const hasRoles = rolesToCheck.every(role => user!.roles);
+    const hasRoles = rolesToCheck.every(role => user!.properties.roles);
     return !hasRoles;
 }
 
