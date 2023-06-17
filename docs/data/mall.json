@@ -1,0 +1,664 @@
+{
+    "object": "list",
+    "results": [
+      {
+        "object": "page",
+        "id": "86485ebc-d10c-47ec-9175-8e6606870231",
+        "created_time": "2023-05-26T15:16:00.000Z",
+        "last_edited_time": "2023-06-05T16:11:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "cover": null,
+        "icon": {
+          "type": "external",
+          "external": {
+            "url": "https://www.notion.so/icons/list-indent_blue.svg"
+          }
+        },
+        "parent": {
+          "type": "database_id",
+          "database_id": "12922c58-024f-4e96-85d0-d48517f514a7"
+        },
+        "archived": false,
+        "properties": {
+          "Mall Icon": {
+            "id": "%3EX%5CK",
+            "type": "files",
+            "files": [
+              {
+                "name": "bot[1].png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3797e90b-87b3-41eb-b794-2b1957114fdc/bot1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=d8fb59823c7e9aeb79ac4cf3d849a1ab82c55d7b0346e9441630415734b25b6e&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.670Z"
+                }
+              }
+            ]
+          },
+          "Poster": {
+            "id": "B%5EtJ",
+            "type": "files",
+            "files": [
+              {
+                "name": "Garden-Route-Mall-3.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/82939ede-cf95-4499-8718-1c52224eb28a/Garden-Route-Mall-3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=6dd38ef0c9f41e98530d805386df214e2f3d7b108b2fde978712517a13de834c&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.676Z"
+                }
+              }
+            ]
+          },
+          "city": {
+            "id": "CI%3AX",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Pretoria"
+            }
+          },
+          "Opening Prompt": {
+            "id": "CyzY",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Hi, I am your Guide to Garden Route Mall, you can call me Garden Route Mall Guide or GRMG for short. Discover the ultimate shopping and entertainment experience at Garden Route Mall in George, South Africa. With a wide range of stores, restaurants, and exciting events throughout the year, it's the perfect destination for locals and tourists alike. You can ask me anything about the mall, it's shops, events, even where to park or how to get from place to place. Let's have some fun!",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Hi, I am your Guide to Garden Route Mall, you can call me Garden Route Mall Guide or GRMG for short. Discover the ultimate shopping and entertainment experience at Garden Route Mall in George, South Africa. With a wide range of stores, restaurants, and exciting events throughout the year, it's the perfect destination for locals and tourists alike. You can ask me anything about the mall, it's shops, events, even where to park or how to get from place to place. Let's have some fun!",
+                "href": null
+              }
+            ]
+          },
+          "region": {
+            "id": "HgBQ",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Western Cape"
+            }
+          },
+          "Slug": {
+            "id": "LFOn",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "garden-route",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "garden-route",
+                "href": null
+              }
+            ]
+          },
+          "bots": {
+            "id": "V%3FzU",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Admin Bot, Arcade Bot, Emergency Bot, Evacuation Bot, Events Bot 1, Events Bot 2, Events Bot 3, Events Bot  4, Fashion Bot 1, Fashion Bot 2, Fashion Bot 3, Fashion Bot 4, Fashion Kids Bot, Finder Bot, Food Court Bot 1, Food Court Bot 2, Food Court Bot 4, Food Court Bot 3, Formal bot, Guide Bot 1, Guide Bot 2, Guide Bot 3, Guide Bot 4, Helper Bot, Info Bot 1"
+            }
+          },
+          "Region": {
+            "id": "ZstX",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "b0f3b01c-01b1-486a-834f-09114b79d5e9"
+              }
+            ],
+            "has_more": false
+          },
+          "City": {
+            "id": "%5E~ll",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "d8630ed5-2401-4b86-af96-a64a4b5543f8"
+              }
+            ],
+            "has_more": false
+          },
+          "Longitude": {
+            "id": "bcUx",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "22.502904",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "22.502904",
+                "href": null
+              }
+            ]
+          },
+          "URL": {
+            "id": "gr%5Co",
+            "type": "url",
+            "url": "https://gardenroute-mall-bot.vercel.app/"
+          },
+          "User Icon": {
+            "id": "jUn%7C",
+            "type": "files",
+            "files": [
+              {
+                "name": "me[1].png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/330a97d5-b605-44d3-856a-fbd2bfec6c19/me1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=32e94632fa3851be23a080f93d1825788e36acaade0b1ed3f6b1d5c4e0965bc0&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.683Z"
+                }
+              }
+            ]
+          },
+          "Latitude": {
+            "id": "rnKE",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "-33.98715",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "-33.98715",
+                "href": null
+              }
+            ]
+          },
+          "ID": {
+            "id": "vIqZ",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": null,
+              "number": 4
+            }
+          },
+          "Chat Bots": {
+            "id": "%7BGAq",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "d427d536-fcbe-472c-8d17-045388aa9953"
+              },
+              {
+                "id": "cb4665fb-6b0c-48ab-960b-6ef1e6be2a8c"
+              },
+              {
+                "id": "696d50d3-97ce-43f4-bdfe-d9040d8fdee6"
+              },
+              {
+                "id": "7cd34fa1-1b27-4650-a6ba-ba82b0ea9a65"
+              },
+              {
+                "id": "741f4822-cb2a-43e3-b500-843ff67a5e9d"
+              },
+              {
+                "id": "3f69988a-b914-4bcb-b991-4d4f1135d5c0"
+              },
+              {
+                "id": "22bccc4e-9ed0-4512-9740-b321d2a3d156"
+              },
+              {
+                "id": "08dbecbd-7b7d-40cb-b94e-4373c3254a30"
+              },
+              {
+                "id": "f4e45b9c-889c-400e-bf4a-a188d96dec61"
+              },
+              {
+                "id": "cb1763f5-93bf-4244-8c1a-63b00def91ed"
+              },
+              {
+                "id": "28940507-f673-4a65-b51e-3b823bff4378"
+              },
+              {
+                "id": "b545182e-bbd5-4e7e-abbb-94fd69cfc0dd"
+              },
+              {
+                "id": "78602cc7-d0bd-4e22-8cfc-ac645d10481f"
+              },
+              {
+                "id": "153a480f-939b-4b23-bc7a-38b5e5b7b18b"
+              },
+              {
+                "id": "e5f35686-f4eb-4d83-827c-b664f6c74275"
+              },
+              {
+                "id": "9a272eb0-0f61-41ba-aec5-ce4678fbc89e"
+              },
+              {
+                "id": "26aa64fe-c795-4b51-91c4-4dc0e5d2e8d1"
+              },
+              {
+                "id": "2adeb255-0db1-42af-bb23-990859ab2905"
+              },
+              {
+                "id": "c0afc5bd-2de9-4aaf-971c-8acc3c021d35"
+              },
+              {
+                "id": "3cf5e891-528f-449b-bc75-bc99e8398c7b"
+              },
+              {
+                "id": "41095e07-1601-4e20-91d7-fd88f2971d8d"
+              },
+              {
+                "id": "dde6faf4-c569-4aaa-b866-2eed0015113e"
+              },
+              {
+                "id": "76f8f07f-96d4-4450-a0d9-813003d209cd"
+              },
+              {
+                "id": "71416ef7-336e-4136-8f9d-00544787f315"
+              },
+              {
+                "id": "ed27749c-3958-436b-a074-890a058a5321"
+              }
+            ],
+            "has_more": true
+          },
+          "Mall Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Garden Route Mall",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Garden Route Mall",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/Garden-Route-Mall-86485ebcd10c47ec91758e6606870231",
+        "public_url": null
+      },
+      {
+        "object": "page",
+        "id": "67172631-ce3c-46ca-b0af-aaf526f8c9be",
+        "created_time": "2023-05-26T14:14:00.000Z",
+        "last_edited_time": "2023-06-05T16:11:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "cover": null,
+        "icon": {
+          "type": "external",
+          "external": {
+            "url": "https://www.notion.so/icons/list-indent_blue.svg"
+          }
+        },
+        "parent": {
+          "type": "database_id",
+          "database_id": "12922c58-024f-4e96-85d0-d48517f514a7"
+        },
+        "archived": false,
+        "properties": {
+          "Mall Icon": {
+            "id": "%3EX%5CK",
+            "type": "files",
+            "files": [
+              {
+                "name": "bot[1].png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5b631b89-f170-410d-bca0-6b812053a716/bot1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=682181d5f465cab27219094faee6992b41763e011ea13c5d876bc06647745665&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.670Z"
+                }
+              }
+            ]
+          },
+          "Poster": {
+            "id": "B%5EtJ",
+            "type": "files",
+            "files": [
+              {
+                "name": "AAEAAQAAAAAAAAAAAAAAJGNjNjkyZTY1LWE0ODUtNDRhYi1hY2FjLTk2ZjczZWZjMTc1Yg[1].jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c73dbf3d-dfca-44f6-aee8-794a0a7db3f1/AAEAAQAAAAAAAAAAAAAAJGNjNjkyZTY1LWE0ODUtNDRhYi1hY2FjLTk2ZjczZWZjMTc1Yg1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=e63d99050707cb101d829a316910a6c4358bd93fe29d3d0c66299929ee055db2&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.679Z"
+                }
+              }
+            ]
+          },
+          "city": {
+            "id": "CI%3AX",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Pretoria"
+            }
+          },
+          "Opening Prompt": {
+            "id": "CyzY",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Hi, I am your Guide to Menlyn Mall, you can call me Menlyn Mall Guide or MMG or short. Discover Africa's most unique shopping experience, offering the greatest variety. Spoil yourself in ultimate fashion, beauty and comfort in the heart of the city of Tshwane.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Hi, I am your Guide to Menlyn Mall, you can call me Menlyn Mall Guide or MMG or short. Discover Africa's most unique shopping experience, offering the greatest variety. Spoil yourself in ultimate fashion, beauty and comfort in the heart of the city of Tshwane.",
+                "href": null
+              }
+            ]
+          },
+          "region": {
+            "id": "HgBQ",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Gauteng"
+            }
+          },
+          "Slug": {
+            "id": "LFOn",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "menlyn-park",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "menlyn-park",
+                "href": null
+              }
+            ]
+          },
+          "bots": {
+            "id": "V%3FzU",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Admin Bot, Emergency Bot, Arcade Bot, Evacuation Bot, Events Bot 1, Events Bot 2, Events Bot 3, Events Bot  4, Fashion Bot 1, Fashion Bot 2, Fashion Bot 3, Fashion Bot 4, Fashion Kids Bot, Finder Bot, Food Court Bot 1, Food Court Bot 2, Food Court Bot 3, Food Court Bot 4, Formal bot, Gadget Bot, Guide Bot 1, Guide Bot 2, Guide Bot 3, Guide Bot 4, Helper Bot, Info Bot 1"
+            }
+          },
+          "Region": {
+            "id": "ZstX",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "b98c6ef3-9a8e-4bbb-b482-29a7c29b423e"
+              }
+            ],
+            "has_more": false
+          },
+          "City": {
+            "id": "%5E~ll",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "d8630ed5-2401-4b86-af96-a64a4b5543f8"
+              }
+            ],
+            "has_more": false
+          },
+          "Longitude": {
+            "id": "bcUx",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "28.276781",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "28.276781",
+                "href": null
+              }
+            ]
+          },
+          "URL": {
+            "id": "gr%5Co",
+            "type": "url",
+            "url": "https://menlyn-mall-ai-cronje-me.vercel.app/"
+          },
+          "User Icon": {
+            "id": "jUn%7C",
+            "type": "files",
+            "files": [
+              {
+                "name": "me[1].png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ac2f6dc6-22f3-4cca-bcad-30f43d93abda/me1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230616T233441Z&X-Amz-Expires=3600&X-Amz-Signature=30e34971fd9f829aaa598feb91745c5ac7bf6a29b95f6890d320c4326a0adc6b&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T00:34:41.687Z"
+                }
+              }
+            ]
+          },
+          "Latitude": {
+            "id": "rnKE",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "25.781882",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "25.781882",
+                "href": null
+              }
+            ]
+          },
+          "ID": {
+            "id": "vIqZ",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": null,
+              "number": 1
+            }
+          },
+          "Chat Bots": {
+            "id": "%7BGAq",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "d427d536-fcbe-472c-8d17-045388aa9953"
+              },
+              {
+                "id": "696d50d3-97ce-43f4-bdfe-d9040d8fdee6"
+              },
+              {
+                "id": "cb4665fb-6b0c-48ab-960b-6ef1e6be2a8c"
+              },
+              {
+                "id": "7cd34fa1-1b27-4650-a6ba-ba82b0ea9a65"
+              },
+              {
+                "id": "741f4822-cb2a-43e3-b500-843ff67a5e9d"
+              },
+              {
+                "id": "3f69988a-b914-4bcb-b991-4d4f1135d5c0"
+              },
+              {
+                "id": "22bccc4e-9ed0-4512-9740-b321d2a3d156"
+              },
+              {
+                "id": "08dbecbd-7b7d-40cb-b94e-4373c3254a30"
+              },
+              {
+                "id": "f4e45b9c-889c-400e-bf4a-a188d96dec61"
+              },
+              {
+                "id": "cb1763f5-93bf-4244-8c1a-63b00def91ed"
+              },
+              {
+                "id": "28940507-f673-4a65-b51e-3b823bff4378"
+              },
+              {
+                "id": "b545182e-bbd5-4e7e-abbb-94fd69cfc0dd"
+              },
+              {
+                "id": "78602cc7-d0bd-4e22-8cfc-ac645d10481f"
+              },
+              {
+                "id": "153a480f-939b-4b23-bc7a-38b5e5b7b18b"
+              },
+              {
+                "id": "e5f35686-f4eb-4d83-827c-b664f6c74275"
+              },
+              {
+                "id": "9a272eb0-0f61-41ba-aec5-ce4678fbc89e"
+              },
+              {
+                "id": "2adeb255-0db1-42af-bb23-990859ab2905"
+              },
+              {
+                "id": "26aa64fe-c795-4b51-91c4-4dc0e5d2e8d1"
+              },
+              {
+                "id": "c0afc5bd-2de9-4aaf-971c-8acc3c021d35"
+              },
+              {
+                "id": "cb3f2328-8d84-4f60-babe-6cbb139b86c4"
+              },
+              {
+                "id": "3cf5e891-528f-449b-bc75-bc99e8398c7b"
+              },
+              {
+                "id": "41095e07-1601-4e20-91d7-fd88f2971d8d"
+              },
+              {
+                "id": "dde6faf4-c569-4aaa-b866-2eed0015113e"
+              },
+              {
+                "id": "76f8f07f-96d4-4450-a0d9-813003d209cd"
+              },
+              {
+                "id": "71416ef7-336e-4136-8f9d-00544787f315"
+              },
+              {
+                "id": "ed27749c-3958-436b-a074-890a058a5321"
+              }
+            ],
+            "has_more": true
+          },
+          "Mall Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Menlyn Park",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Menlyn Park",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/Menlyn-Park-67172631ce3c46cab0afaaf526f8c9be",
+        "public_url": null
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page",
+    "page": {}
+  }

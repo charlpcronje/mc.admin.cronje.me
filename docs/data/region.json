@@ -1,0 +1,1317 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "b0f3b01c-01b1-486a-834f-09114b79d5e9",
+      "created_time": "2023-05-24T19:17:00.000Z",
+      "last_edited_time": "2023-06-16T11:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "86485ebc-d10c-47ec-9175-8e6606870231"
+            }
+          ],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Garden Route Mall"
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 9
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "b8a730ea-4df6-488a-8681-23bac5f6372e"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Cape Town"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Western Cape",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Western Cape",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Western-Cape-b0f3b01c01b1486a834f09114b79d5e9",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "ce5446aa-174e-4b19-8e47-d94a535fa67e",
+      "created_time": "2023-05-24T19:17:00.000Z",
+      "last_edited_time": "2023-05-24T19:17:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 8
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "093f8710-ee75-4090-a60e-532152e20567"
+            },
+            {
+              "id": "979a80f8-3426-4f99-8f07-7ef4cf886649"
+            },
+            {
+              "id": "0caecb62-f3e9-4f70-bddf-583358a43292"
+            },
+            {
+              "id": "37f098da-87a8-44c5-95e7-be92c77f1522"
+            },
+            {
+              "id": "6dbac0f0-a1fa-4b56-ba8b-f2e06b73294a"
+            },
+            {
+              "id": "07916f93-a041-452d-a3eb-6e6f94edabdb"
+            },
+            {
+              "id": "f003afc9-3582-4cd1-ab7f-b09f3e77d4ca"
+            },
+            {
+              "id": "f710ae50-f461-44ca-b8f3-889ebf33517d"
+            },
+            {
+              "id": "803100cb-ca39-4bcc-bb00-7758461137a6"
+            },
+            {
+              "id": "5fec816d-bf8f-4420-bc2c-637ed755cd74"
+            },
+            {
+              "id": "45bebd58-24b9-4342-b009-70bef9994a13"
+            },
+            {
+              "id": "4d0e73aa-347c-46af-aeef-9bdd9ffc3c10"
+            },
+            {
+              "id": "96bef40d-6648-4548-aaa5-d23aa6783a38"
+            },
+            {
+              "id": "51ca6ff9-7785-45d9-868b-45aefb78965c"
+            },
+            {
+              "id": "6c0b0c7d-8958-4623-82cf-0139400e8321"
+            },
+            {
+              "id": "88953ca3-772f-4add-a6a9-11bd5967f72d"
+            },
+            {
+              "id": "a2bd40c7-674c-4f4a-8f9a-42bb00938c03"
+            },
+            {
+              "id": "90d17168-28f7-41d2-93d3-85cc80d1fbf6"
+            },
+            {
+              "id": "a28f891b-7362-4259-a046-e2256d867b2a"
+            },
+            {
+              "id": "ed5b99eb-1cf9-453d-bd36-029a6ddb6674"
+            },
+            {
+              "id": "273b0723-daf6-4965-bcb6-4ca3719d98b4"
+            },
+            {
+              "id": "15cfd270-18a3-4ce8-bbe6-6bba82d11c51"
+            },
+            {
+              "id": "2c5357d9-b112-4e5b-be0c-ddfaa10bcca1"
+            },
+            {
+              "id": "7ae5ed68-5df1-4b7e-976a-9d3d9ae99f90"
+            },
+            {
+              "id": "72b26aa6-76f8-4136-99f9-cf1c0fe0f032"
+            }
+          ],
+          "has_more": true
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Alexander Bay, Carnarvon, Colesberg, De Aar, Kathu, Kimberley, Kuruman, Pofadder, Prieska, Springbok, Upington, Warrenton, Beaufort West, Bredasdorp, Caledon, Darling, George, Hermanus, Khayelitsha, Knysna, Kuilsrivier, Malmesbury, Mitchells Plain, Montagu, Moorreesburg"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Northern Cape",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Northern Cape",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Northern-Cape-ce5446aa174e4b198e47d94a535fa67e",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "3b095d05-4e40-43a0-9b0b-949bb501ce3b",
+      "created_time": "2023-05-24T19:16:00.000Z",
+      "last_edited_time": "2023-05-24T19:16:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 7
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "fac71f44-9f0b-499e-997e-cb8c36be5b68"
+            },
+            {
+              "id": "eec20199-a219-4c6e-9f54-d5c970e7a22a"
+            },
+            {
+              "id": "bcc6f47c-aa93-4a61-906c-a1b0e69ff77e"
+            },
+            {
+              "id": "ded25918-1235-40bd-b4c1-42064bc3066f"
+            },
+            {
+              "id": "41655c96-5efa-4054-a314-201ff4a32e5a"
+            },
+            {
+              "id": "e93ef23b-bc8e-4344-9c67-b516f8336b62"
+            },
+            {
+              "id": "b4cc4aec-6292-4610-b362-2e306dbf1a88"
+            },
+            {
+              "id": "76a050e9-9a3d-41de-bc50-7d2fadc685b2"
+            },
+            {
+              "id": "6151e602-99eb-4b46-ba0f-019b43b1e021"
+            },
+            {
+              "id": "a4b8e3f4-fce0-464a-9a3f-92e2ae18f865"
+            },
+            {
+              "id": "a6a6535d-c7fe-49af-823f-ed56a30df60c"
+            },
+            {
+              "id": "16bb01c6-f89d-4e9b-8b11-5919cb69f495"
+            },
+            {
+              "id": "e1f85b13-7189-4d74-b4da-18fddc59b089"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Bloemhof, Brits, Fochville, Klerksdorp, Lichtenburg, Mahikeng, Mmabatho, Orkney, Potchefstroom, Rustenburg, Sannieshof, Stilfontein, Vryburg"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "North West",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "North West",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/North-West-3b095d054e4043a09b0b949bb501ce3b",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "cf85303c-0f9b-4235-971d-279e584d4e9d",
+      "created_time": "2023-05-24T19:15:00.000Z",
+      "last_edited_time": "2023-05-24T19:15:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 6
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "6e6682b6-3486-4e7e-b7fc-46c73b847819"
+            },
+            {
+              "id": "baccb99d-a30f-4649-9473-f2bf04e4a6fd"
+            },
+            {
+              "id": "5218ef90-89f3-4a70-bd29-2067243f26f9"
+            },
+            {
+              "id": "585781e8-aed2-4f01-986d-ab33ef356552"
+            },
+            {
+              "id": "22bf03a8-695c-430e-a2e7-a8f344ff8bc0"
+            },
+            {
+              "id": "a728f504-8d90-4479-bd96-87bb96b445c4"
+            },
+            {
+              "id": "0e086d46-2237-4b58-9dfa-55256c4bec67"
+            },
+            {
+              "id": "581f9f24-0b78-4cff-a38c-3d254b3db83c"
+            },
+            {
+              "id": "f4c53477-730c-46b6-8227-a15f66352473"
+            },
+            {
+              "id": "7c0db85d-e3ff-450a-8c72-fdc00838004e"
+            },
+            {
+              "id": "3319dcda-cfae-49a7-84ed-36ffcfc93ddd"
+            },
+            {
+              "id": "087f208c-08d0-4311-a60b-e200a8cae312"
+            },
+            {
+              "id": "dfa28d81-ecb9-45d0-9601-168a32aa0258"
+            },
+            {
+              "id": "b6d07fdd-ff78-43c8-bb10-2d0c9b3bbf0a"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Amersfoort, Barberton, Bethal, Breyten, Evander, Kinross, Komatipoort, Lydenburg, Middelburg, Nelspruit, Secunda, Standerton, Volksrust, Witbank"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Mpumalanga",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Mpumalanga",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Mpumalanga-cf85303c0f9b4235971d279e584d4e9d",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "f41f8659-9059-4990-b8fb-d8d4e72a8203",
+      "created_time": "2023-05-24T19:15:00.000Z",
+      "last_edited_time": "2023-05-24T19:15:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 5
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "3946569a-7bf3-49d2-8497-d3befec54f63"
+            },
+            {
+              "id": "8c37edd6-8ac1-4b1f-827c-afd96120c1b0"
+            },
+            {
+              "id": "f5dbad6c-4773-4147-b3a5-a628dbc76f30"
+            },
+            {
+              "id": "d0d02263-21a9-4264-b946-0d2cc3693345"
+            },
+            {
+              "id": "2352e888-755a-4dce-90a2-bf13e9540c17"
+            },
+            {
+              "id": "a0ebc329-b56d-4ec7-b335-5b47db0034a4"
+            },
+            {
+              "id": "9761cd62-9a6b-4673-9237-d66a4ce3292a"
+            },
+            {
+              "id": "de97f219-7f03-4637-a66c-21fd4787637c"
+            },
+            {
+              "id": "d6ac253a-99f1-4626-b928-78fabe151997"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Ga-Kgapane, Lebowakgomo, Louis Trichardt, Musina, Phalaborwa, Polokwane, Thabazimbi, Thohoyandou, Tzaneen"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Limpopo",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Limpopo",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Limpopo-f41f865990594990b8fbd8d4e72a8203",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "a0b8eee9-68e6-455b-ab64-d70c128402f5",
+      "created_time": "2023-05-24T19:15:00.000Z",
+      "last_edited_time": "2023-05-24T19:15:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 4
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "d96489ae-4690-422c-a808-8d72fa6c4484"
+            },
+            {
+              "id": "f0950397-8c60-41d5-95fa-1856f306c813"
+            },
+            {
+              "id": "65b73fd8-f5c6-4f0f-90af-39bf37b46a3d"
+            },
+            {
+              "id": "dd9cca48-753f-4fab-9e43-a21d6381db70"
+            },
+            {
+              "id": "07006a53-1f2f-4659-a2cb-1d1de80ec99b"
+            },
+            {
+              "id": "6e9d440a-f460-42d3-aef0-c61053a861ea"
+            },
+            {
+              "id": "ccf6a48e-3f4a-409c-b07a-22d1b9afe326"
+            },
+            {
+              "id": "b9c16e4a-0554-46a5-b451-62b566e944c2"
+            },
+            {
+              "id": "a049e8dc-0f67-49fa-bc05-67640f185075"
+            },
+            {
+              "id": "3f56d265-0d98-44ed-8353-070bc0f771d8"
+            },
+            {
+              "id": "14e6d05a-9b1a-4644-8fee-8957db424264"
+            },
+            {
+              "id": "b362f965-9f48-41fb-b1a8-1078a180f37c"
+            },
+            {
+              "id": "f4657bc5-7f7d-41ec-bfee-f6a7be8bc1cb"
+            },
+            {
+              "id": "c0d7959b-7dd2-4a68-85e2-ed3a0f2e68c0"
+            },
+            {
+              "id": "a8fa8a04-d97b-49bc-abe7-37b9daa0fed0"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Dundee, Durban, Glencoe, Ladysmith, Margate, New Germany, Newcastle, Pietermaritzburg, Port Shepstone, Richards Bay, Scottburgh, Ubombo, Ulundi, Vryheid, Westville"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "KwaZulu-Natal",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "KwaZulu-Natal",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/KwaZulu-Natal-a0b8eee968e6455bab64d70c128402f5",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "2b39a509-9f89-4091-a9e6-7d6ac6faaa16",
+      "created_time": "2023-05-24T19:05:00.000Z",
+      "last_edited_time": "2023-05-24T19:14:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 1
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "6d850a3a-ce57-4512-ae37-2375235d7314"
+            },
+            {
+              "id": "855fc5dc-42d2-4be4-9001-1d3a6d85aa4a"
+            },
+            {
+              "id": "ba6c88b0-6cbd-46da-804d-a6cd3c859a4d"
+            },
+            {
+              "id": "828071de-3b7d-48d0-8099-5e3df8bfa821"
+            },
+            {
+              "id": "3e9f63bc-b0ac-43da-b25b-a754b270018a"
+            },
+            {
+              "id": "e58808e9-088b-4de9-be32-85aa98c9dd27"
+            },
+            {
+              "id": "ef86876f-eb07-43e0-b240-41d0825540f2"
+            },
+            {
+              "id": "9b5fc8e6-3cfa-41b3-a51e-87f56ef301fb"
+            },
+            {
+              "id": "1f721770-3c18-4b5e-8d87-db84727f7e44"
+            },
+            {
+              "id": "1c108a07-fe15-428e-a99e-f570954a9e44"
+            },
+            {
+              "id": "95094bd8-2048-4b29-89cc-59d6d9b9cb61"
+            },
+            {
+              "id": "2c5040d3-6912-4a48-81e2-2018883dc26a"
+            },
+            {
+              "id": "a576a5fc-44b7-46e2-ac12-ab0c58bcd931"
+            },
+            {
+              "id": "0fabfee0-8536-4068-b303-9f8a2d519b35"
+            },
+            {
+              "id": "06edbd3d-dcef-460e-8442-94969c147da6"
+            },
+            {
+              "id": "2dd0491e-afd0-4632-81a8-23e3becb08b6"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Aliwal North, Bhisho, Cradock, East London, Graaff-Reinet, Grahamstown, Jeffrey’s Bay, Middelburg, Port Alfred, Port Elizabeth, Port Saint John’s, Queenstown, Stutterheim, Summerstrand, Uitenhage, Umtata"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Eastern Cape",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Eastern Cape",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Eastern-Cape-2b39a5099f894091a9e67d6ac6faaa16",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "b98c6ef3-9a8e-4bbb-b482-29a7c29b423e",
+      "created_time": "2023-05-24T19:05:00.000Z",
+      "last_edited_time": "2023-05-24T19:14:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "67172631-ce3c-46ca-b0af-aaf526f8c9be"
+            }
+          ],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Menlyn Park"
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "fa0a2357-f5ba-483a-8002-831c94df44a5"
+            },
+            {
+              "id": "e0907b69-6906-47b4-8c14-7e9330f5701c"
+            }
+          ],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 2
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "8becaf10-2805-43bb-9d6d-419c3baa23fd"
+            },
+            {
+              "id": "1b280db1-110c-466e-9de0-648c5812df91"
+            },
+            {
+              "id": "4ad1c2a9-ec68-4106-9a51-2a17102ec356"
+            },
+            {
+              "id": "e1c25527-f506-4500-ab4f-d1f4f92624e5"
+            },
+            {
+              "id": "ab6dd669-d3e2-4887-9247-b9d6ec8e08ce"
+            },
+            {
+              "id": "0c975b0f-7794-428d-b4fb-54d7af5c0f55"
+            },
+            {
+              "id": "2b18ea4f-027b-4c85-a280-dbcca936dcfe"
+            },
+            {
+              "id": "370c0517-ee71-4c67-98ae-7fc8a9b18585"
+            },
+            {
+              "id": "19bb402c-e18e-4d81-a7c2-a412069038c9"
+            },
+            {
+              "id": "a88c5fe4-de28-40a7-89b6-593f7251c600"
+            },
+            {
+              "id": "6f6c5b7c-79bb-4945-90be-8dfd9989522a"
+            },
+            {
+              "id": "27186b18-7592-421b-bdf5-e806a4a71161"
+            },
+            {
+              "id": "58e91c74-cf0a-46a8-9bd6-0bdc62216807"
+            },
+            {
+              "id": "7db94c66-afa0-4814-82b6-6afa6daacd8e"
+            },
+            {
+              "id": "f818e221-1892-486c-9c4a-09209b2ae6d6"
+            },
+            {
+              "id": "d8630ed5-2401-4b86-af96-a64a4b5543f8"
+            },
+            {
+              "id": "528357da-8763-4537-97c0-5ff3fdc0eb28"
+            },
+            {
+              "id": "d6c22b33-2e0c-4767-8859-45a1360491bd"
+            },
+            {
+              "id": "c1c456ad-ac62-44cc-a110-9347c7061df4"
+            },
+            {
+              "id": "0ff4e9b2-adbd-4507-9576-74f1a5af78ea"
+            },
+            {
+              "id": "440bffc1-818c-4754-a81d-062a27335dde"
+            },
+            {
+              "id": "dfdc2ae7-b6df-4e4a-a1ed-47380d114c0a"
+            },
+            {
+              "id": "027d0588-0347-4968-93c3-c7509e677c1a"
+            },
+            {
+              "id": "57248e01-b0e4-4910-b8d2-74f6e28aec77"
+            },
+            {
+              "id": "6af1dec3-4d17-41ed-b900-d25e080363d8"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "webAlly, FGX Studios"
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Alberton, Bedfordview, Benoni, Boksburg, Brakpan, Bronkhorstspruit, Carletonville, Centurion, Cullinan, Edenvale, Germiston, Johannesburg, Katlehong, Krugersdorp, Nigel, Pretoria, Primrose, Randburg, Randfontein, Roodepoort, Sandton, Soweto, Springs, Vanderbijlpark, Vereeniging"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Gauteng",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Gauteng",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Gauteng-b98c6ef39a8e4bbbb48229a7c29b423e",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "e72f69ff-2880-4d01-bccc-440f051a6b95",
+      "created_time": "2023-05-24T19:05:00.000Z",
+      "last_edited_time": "2023-05-24T19:14:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2d88b63b-fc46-440c-b8c8-99536e872bd8"
+      },
+      "archived": false,
+      "properties": {
+        "Shopping Malls": {
+          "id": "%3C%5ESC",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "shoppingMalls": {
+          "id": "D%3CkZ",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "Companies": {
+          "id": "LV%40O",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "ID": {
+          "id": "UfOE",
+          "type": "unique_id",
+          "unique_id": {
+            "prefix": null,
+            "number": 3
+          }
+        },
+        "🌃 Cities": {
+          "id": "dbL%7C",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "dd7a31a5-8881-4539-ba24-685f98556586"
+            },
+            {
+              "id": "0730f453-e4c5-4956-8449-e87939e136bb"
+            },
+            {
+              "id": "aef2600c-4718-4530-99cf-2792f40ef9ef"
+            },
+            {
+              "id": "7e2abd91-c3af-4823-93a2-9873c2cfdcd5"
+            },
+            {
+              "id": "c1c68e2b-2555-44cc-b9af-0fdf0d4bf268"
+            },
+            {
+              "id": "6070190c-845c-443c-ab82-1cb2a80073a3"
+            },
+            {
+              "id": "4beee62e-3ddb-442b-8a1b-503cf6d11187"
+            },
+            {
+              "id": "1a11c114-70a1-42bc-9780-54561aea6bc2"
+            },
+            {
+              "id": "f48a3379-4e58-4ab5-8ba8-ca5bb84e1f8e"
+            },
+            {
+              "id": "f056c593-6342-4e19-bca8-bbc865620220"
+            },
+            {
+              "id": "4b6a2479-0f3b-41be-b0b2-3bbdf1fe3bab"
+            },
+            {
+              "id": "b375f00e-4d82-4e2e-bc7d-45ada6c33e30"
+            },
+            {
+              "id": "b34d3e2b-88c6-4655-aa51-f49c646e2009"
+            },
+            {
+              "id": "1235f282-1d4c-4c75-ba03-2ca752bbebca"
+            },
+            {
+              "id": "63b5f2f8-e188-4620-be53-af93e037f84d"
+            },
+            {
+              "id": "ab4ca143-7309-4146-b5af-c25864c5edb8"
+            }
+          ],
+          "has_more": false
+        },
+        "companies": {
+          "id": "nVYc",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": ""
+          }
+        },
+        "cities": {
+          "id": "uZ%60O",
+          "type": "formula",
+          "formula": {
+            "type": "string",
+            "string": "Allanridge, Bethlehem, Bloemfontein, Brandfort, Edenburg, Fouriesburg, Frankfort, Kroonstad, Odendaalsrus, Sasolburg, Ventersburg, Villiers, Virginia, Warden, Welkom, Wepener"
+          }
+        },
+        "Region": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Free State",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Free State",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Free-State-e72f69ff28804d01bccc440f051a6b95",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page",
+  "page": {}
+}

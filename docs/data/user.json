@@ -1,0 +1,141 @@
+{
+    "object": "list",
+    "results": [
+      {
+        "object": "page",
+        "id": "67b36063-30c2-4861-b718-b031dc16e822",
+        "created_time": "2023-05-24T17:16:00.000Z",
+        "last_edited_time": "2023-06-13T08:05:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "database_id",
+          "database_id": "024faf40-382d-4875-b11e-49f13656ce36"
+        },
+        "archived": false,
+        "properties": {
+          "ID": {
+            "id": "%3FDZZ",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": null,
+              "number": 1
+            }
+          },
+          "Status": {
+            "id": "EpiX",
+            "type": "checkbox",
+            "checkbox": true
+          },
+          "company": {
+            "id": "LM%7CR",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "webAlly"
+            }
+          },
+          "Roles": {
+            "id": "Xp%5B%60",
+            "type": "multi_select",
+            "multi_select": [
+              {
+                "id": "_T>B",
+                "name": "Admin",
+                "color": "orange"
+              }
+            ]
+          },
+          "Password": {
+            "id": "iV%5CC",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "9983538",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "9983538",
+                "href": null
+              }
+            ]
+          },
+          "Email Address": {
+            "id": "mhLX",
+            "type": "email",
+            "email": "charl@cronje.me"
+          },
+          "Avatar": {
+            "id": "nLgl",
+            "type": "files",
+            "files": [
+              {
+                "name": "msedge_sCcXE17u0w.png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/319c8c4c-4bb4-4429-81d7-0f17e31bceeb/msedge_sCcXE17u0w.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230617%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230617T051437Z&X-Amz-Expires=3600&X-Amz-Signature=b05d05c776497e07528620854b2ffc0f903ce29ed20d665e5ac6072fb36b6333&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T06:14:37.556Z"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "id": "%7DHLJ",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "fa0a2357-f5ba-483a-8002-831c94df44a5"
+              }
+            ],
+            "has_more": false
+          },
+          "Full Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Charl Cronje",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Charl Cronje",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/Charl-Cronje-67b3606330c24861b718b031dc16e822",
+        "public_url": null
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page",
+    "page": {}
+  }

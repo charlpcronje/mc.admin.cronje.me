@@ -1,0 +1,322 @@
+{
+    "object": "list",
+    "results": [
+      {
+        "object": "page",
+        "id": "e0907b69-6906-47b4-8c14-7e9330f5701c",
+        "created_time": "2023-05-24T18:54:00.000Z",
+        "last_edited_time": "2023-06-16T12:55:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "database_id",
+          "database_id": "9572ec4b-e6de-4b54-b271-2e776976d0d5"
+        },
+        "archived": false,
+        "properties": {
+          "Contact Number": {
+            "id": "%3FOEX",
+            "type": "phone_number",
+            "phone_number": null
+          },
+          "province": {
+            "id": "Ad%5BP",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Gauteng"
+            }
+          },
+          "Province": {
+            "id": "AfFL",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "b98c6ef3-9a8e-4bbb-b482-29a7c29b423e"
+              }
+            ],
+            "has_more": false
+          },
+          "Logo": {
+            "id": "GgRh",
+            "type": "files",
+            "files": [
+              {
+                "name": "chrome_tMkD80RZuN.png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/052caf4f-e03b-490d-8954-c40ce26817bd/chrome_tMkD80RZuN.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230617%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230617T051241Z&X-Amz-Expires=3600&X-Amz-Signature=ae10f4978da82d4a8383a111cbd7985d1a68ab71884e0e6819a3a9f9d4b43ada&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T06:12:41.943Z"
+                }
+              },
+              {
+                "name": "fgx-studios-logo.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8d900da7-bd6c-4016-9521-8a4eaab25d57/fgx-studios-logo.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230617%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230617T051241Z&X-Amz-Expires=3600&X-Amz-Signature=344b717cd6cc137764612563a80b84d5ac4e221b654adea79b0a9161237e3b70&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T06:12:41.948Z"
+                }
+              }
+            ]
+          },
+          "Users": {
+            "id": "TUUy",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "dc390b61-23c9-413e-88e9-8c6b81fe9035"
+              },
+              {
+                "id": "ea3dac4f-e677-4ca3-8695-5db428e55d7e"
+              }
+            ],
+            "has_more": false
+          },
+          "users": {
+            "id": "%5DLxj",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Anthony Otte, Marketing"
+            }
+          },
+          "Email Address": {
+            "id": "bmjB",
+            "type": "email",
+            "email": "anthony@fgx.co.za"
+          },
+          "ID": {
+            "id": "ixnZ",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": null,
+              "number": 1
+            }
+          },
+          "companyName": {
+            "id": "kY%3C%5D",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "FGX Studios"
+            }
+          },
+          "Contact Person": {
+            "id": "%7BhYh",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Anthony Otte",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Anthony Otte",
+                "href": null
+              }
+            ]
+          },
+          "Company Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "FGX Studios",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "FGX Studios",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/FGX-Studios-e0907b69690647b48c147e9330f5701c",
+        "public_url": null
+      },
+      {
+        "object": "page",
+        "id": "fa0a2357-f5ba-483a-8002-831c94df44a5",
+        "created_time": "2023-05-24T18:54:00.000Z",
+        "last_edited_time": "2023-06-16T12:54:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "39e1f1c8-74e8-4187-96bd-4fb10a8f62f5"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "database_id",
+          "database_id": "9572ec4b-e6de-4b54-b271-2e776976d0d5"
+        },
+        "archived": false,
+        "properties": {
+          "Contact Number": {
+            "id": "%3FOEX",
+            "type": "phone_number",
+            "phone_number": "066 3322 481"
+          },
+          "province": {
+            "id": "Ad%5BP",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Gauteng"
+            }
+          },
+          "Province": {
+            "id": "AfFL",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "b98c6ef3-9a8e-4bbb-b482-29a7c29b423e"
+              }
+            ],
+            "has_more": false
+          },
+          "Logo": {
+            "id": "GgRh",
+            "type": "files",
+            "files": [
+              {
+                "name": "chrome_WyoZtZFT3d.png",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2118cc45-343d-4af2-b33a-36235dde6fa0/chrome_WyoZtZFT3d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230617%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230617T051241Z&X-Amz-Expires=3600&X-Amz-Signature=57f43c2c553e6bf285e45ea99b5b95ea341a5ed2d577674ef645d15828edce82&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T06:12:41.933Z"
+                }
+              },
+              {
+                "name": "original_square_a.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/25611a07-da86-4665-a2d5-464fe3f7d111/original_square_a.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230617%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230617T051241Z&X-Amz-Expires=3600&X-Amz-Signature=f82bb132bf01eaa63da26d69ed0ff55a26e43261d1f5ec973d2fd0cb97defb95&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time": "2023-06-17T06:12:41.937Z"
+                }
+              }
+            ]
+          },
+          "Users": {
+            "id": "TUUy",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "67b36063-30c2-4861-b718-b031dc16e822"
+              }
+            ],
+            "has_more": false
+          },
+          "users": {
+            "id": "%5DLxj",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "Charl Cronje"
+            }
+          },
+          "Email Address": {
+            "id": "bmjB",
+            "type": "email",
+            "email": "charl@cronje.me"
+          },
+          "ID": {
+            "id": "ixnZ",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": null,
+              "number": 2
+            }
+          },
+          "companyName": {
+            "id": "kY%3C%5D",
+            "type": "formula",
+            "formula": {
+              "type": "string",
+              "string": "webAlly"
+            }
+          },
+          "Contact Person": {
+            "id": "%7BhYh",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Charl Cronje",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Charl Cronje",
+                "href": null
+              }
+            ]
+          },
+          "Company Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "webAlly",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "webAlly",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/webAlly-fa0a2357f5ba483a8002831c94df44a5",
+        "public_url": null
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page",
+    "page": {}
+  }

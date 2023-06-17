@@ -51,23 +51,23 @@ export interface CityI {
 }
 
 export interface PageI {
-    object: string;
-    id: string;
-    created_time: Date;
-    last_edited_time: Date;
-    created_by: { 
-        object: 'user';
-        id: string;
+    object?: string;
+    id?: string;
+    created_time?: Date;
+    last_edited_time?: Date;
+    created_by?: { 
+        object?: 'user';
+        id?: string;
     }
-    last_edited_by: { 
-        object: 'user';
-        id: string;
+    last_edited_by?: { 
+        object?: 'user';
+        id?: string;
     }
     cover?: string | null;
     icon?: string | null;
     parent?: {
-        type: 'database_id';
-        database_id: string;
+        type?: 'database_id';
+        database_id?: string;
     } 
     archived?: boolean;
     properties?: UserI | BotI | CityI | any;
