@@ -13,6 +13,7 @@
 - [Presentation](./presentation.md)
 - [Getting Started](./gettingStarted.md)
 - [Current Progress](./curretProgress.md)
+- [Metal Vector Database for long term Memory](./metalVector.md)
 - [Themes](./themes.md)
 
 
@@ -31,7 +32,7 @@
 - [Notion API](./notionAPI.md)
 - [Notion URL and CMS](./notionAsCMS.md)
 - [Notion API DB Responses](./notionApiDB.md)
-- [Authentication with Nuxt DB and JWT](./notionAuth.md)
+- [Authentication, Next 3, Cookies, Notion DB](./notionAuth.md)
 - [Notion Database Reference](./notionDBRef.md)
 - [My Notion Data Handler Factory Method](./notionDataHandler.md)
 

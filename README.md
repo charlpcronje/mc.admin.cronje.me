@@ -76,22 +76,22 @@ In Notion I created the following DB Tables
 - [Report a bug](./docs/bugReport.md)
 
 ### Packages
-- [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
-- [x] ✨ [Headless UI](https://headlessui.dev/)
-- [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
-- [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
-- [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
-- [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR]
-- [x] 🌙 Switch Theme (light, dark, system, realtime)
-- [x] 🇮🇩 Language Switcher
-- [x] 🪝 Built-in Component & Layout
-- [x] Eslint & Prettier
-- [x] Custom Workspace Snippets
-- [x] Built-in Unit Test
-- [x] Configurable Theme
-  - [x] Primary Colors
-  - [x] Font
+- [-] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
+- [-] ✨ [Headless UI](https://headlessui.dev/)
+- [-] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
+- [-] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [-] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
+- [-] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
+- [-] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR]
+- [-] 🌙 Switch Theme (light, dark, system, realtime)
+- [-] 🇮🇩 Language Switcher
+- [-] 🪝 Built-in Component & Layout
+- [-] Eslint & Prettier
+- [-] Custom Workspace Snippets
+- [-] Built-in Unit Test
+- [-] Configurable Theme
+  - [-] Primary Colors
+  - [-] Font
 
 ## Table of Contents
 - [Mall Chat Admin](#mall-chat-admin)
@@ -124,27 +124,27 @@ In Notion I created the following DB Tables
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
 ## Available Components
-- [x] Footer
-- [x] Button
-- [x] Anchor (link)
-- [x] Alert
-- [x] Card
-- [x] Action Sheet
-- [x] Theme Toggle / Switcher
-- [x] Navbar
-  - [x] Navbar Builder
-  - [x] Drawer (on mobile)
-  - [x] Options (on mobile)
-- [x] Page Layout
-  - [x] Wrapper
-  - [x] Header
-    - [x] Title
-  - [x] Body
-    - [x] Section
-      - [x] Section Wrapper
-      - [x] Section Title
-- [x] Dashboard Layout
-    - [x] Sidebar
+- [-] Footer
+- [-] Button
+- [-] Anchor (link)
+- [-] Alert
+- [-] Card
+- [-] Action Sheet
+- [-] Theme Toggle / Switcher
+- [-] Navbar
+  - [-] Navbar Builder
+  - [-] Drawer (on mobile)
+  - [-] Options (on mobile)
+- [-] Page Layout
+  - [-] Wrapper
+  - [-] Header
+    - [-] Title
+  - [-] Body
+    - [-] Section
+      - [-] Section Wrapper
+      - [-] Section Title
+- [-] Dashboard Layout
+    - [-] Sidebar
 - [ ] Modal
 
 ## Notes

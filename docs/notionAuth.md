@@ -1,4 +1,4 @@
-# Authentication with Nuxt DB and JWT
+# Authentication with Next 3, Cookies and Notion DB
 
 To do authentication with a Notion database we can use the following example Database structure
 
@@ -6,7 +6,7 @@ To do authentication with a Notion database we can use the following example Dat
 
 ### `Users` Database
 
-- ID (Formula id())
+- ID (unique_id)
 - Full Name (String)
 - Email Address (Email)
 - Password (String)
@@ -16,7 +16,7 @@ To do authentication with a Notion database we can use the following example Dat
 ### Companies
 
 For the companies Database I have the following Columns:
-- ID (Formula id())
+- ID (unique_id)
 - Company Name
 - Description
 - Email
@@ -26,18 +26,10 @@ For the companies Database I have the following Columns:
 
 ## Outline
 
-- I want to authenticate a user with the Email Address and Password field in the Users Database use it JWT authentication in my Nuxt 3 Application. I want to use Pinia for State Management.
-- I am not sure how the JWT Tokens work and where to store them, so also suggest if I should create another database in Notion to save the tokens.
+- I want to authenticate a user with the Email Address and Password field in the Users Database, and useState for state
 - I also need middleware to check the routes the user is authenticated against the roles column in the Users Database.
-- I also want the Notion Client to run as a Singleton
 
 To achieve your requirements, you can follow these steps:
-
-1. Set up Notion API and create a singleton Notion client.
-2. Create a JWT authentication system.
-3. Set up Pinia for state management.
-4. Create middleware for route authentication.
-5. Use Yup for error handling and validation.
 
 First, set up the Notion API by following the official guide: https://developers.notion.com/docs/getting-started
 
@@ -46,13 +38,8 @@ First, set up the Notion API by following the official guide: https://developers
 Next, install the required packages for your Nuxt 3 application:
 
 ```sh
-npm install @nuxtjs/axios @nuxtjs/auth-next @notionhq/client pinia
+npm install notionhq/client
 ```
-
-Now, create a Pinia store for state management. In your `src` folder, create a folder named `store` and inside it, create a file named `user.ts`:
-
-Let's start with setting up the Notion API and creating a singleton Notion client:
-
 
 ## Notion Client Singleton
 

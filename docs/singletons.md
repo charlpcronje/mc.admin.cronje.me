@@ -1,5 +1,9 @@
 # Singleton Design Pattern
 
+/**
+ * TODO [ ] : Add the Notion client as a singleton
+ */ 
+
 The Singleton pattern is a creation's design pattern that ensures a class has only one instance and provides a global access point to that instance [Refactoring Guru](https://refactoring.guru/design-patterns/singleton). It is useful when exactly one object is needed to coordinate actions across a system, such as logging, drivers objects, caching, and thread pool (https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples).
 
 There are several ways to implement the Singleton pattern, each with its pros and cons:
