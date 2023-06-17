@@ -29,38 +29,40 @@
 
 
 ### Notion API and SDK
-- [Notion API](./notionAPI.md)
-- [Notion URL and CMS](./notionAsCMS.md)
-- [Notion API DB Responses](./notionApiDB.md)
-- [Authentication, Next 3, Cookies, Notion DB](./notionAuth.md)
-- [Notion Database Reference](./notionDBRef.md)
-- [My Notion Data Handler Factory Method](./notionDataHandler.md)
+- [Notion API](./notion/notionAPI.md)
+- [Notion URL and CMS](./notion/notionAsCMS.md)
+- [Notion API DB Responses](./notion/notionApiDB.md)
+- [Authentication, Next 3, Cookies, Notion DB](./notion/notionAuth.md)
+- [Notion Database Reference](./notion/notionDBRef.md)
+- [My Notion Data Handler Factory Method](./notion/notionDataHandler.md)
 
 ### Useful for this project
-- [Singletons](singletons.md)
-- [Load custom .env file](./customenv.md)
+- [Singletons](./usefull/singletons.md)
+- [Load custom .env file](./usefull/customenv.md)
 - [Tailwind CSS Cheat Sheet](https://flowbite.com/tools/tailwind-cheat-sheet)
-- [Pinia Store](./piniaStore.md)
-- [Nuxt Icon Docs](./nuxtIcon.md)
+
+### Packages
+- [Pinia Store](./packages/piniaStore.md)
+- [Nuxt Icon Docs](./packages/nuxtIcon.md)
   - [Nuxt Icons](https://icones.js.org)
-- [Element Plus Nuxt](./elementPlusNuxt.md)
-- [Nuxt Viewport](./nuxtViewPort.md)
-- [Nuxt ChatGPT](./nuxtChatGPT.md)
+- [Element Plus Nuxt](./packages/elementPlusNuxt.md)
+- [Nuxt Viewport](./packages/nuxtViewPort.md)
+- [Nuxt ChatGPT](./packages/nuxtChatGPT.md)
 
 ### Microsoft Clarity
 - [What is Clarity](./clarity/README.md)
 - [Getting Started](./clarity/gettingStarted.md)
 
 ### Data
-- [City Data - back4app](./cityData.md)
+- [City Data - back4app](./data/cityData.md)
 
 ### Pricing Models
-- [Maintenance and costing](./sla.md)
+- [Maintenance and costing](./fgx/sla.md)
 
 ### Chat Bot Creation and Optimization
 - [Creating a new mall Bot](./mallChatAdmin.md)
-- [Customizing Mall Bot](./mallConfig.md)
-- [Some optimizations](./optimize.md)
+- [Customizing Mall Bot](./bots/mallConfig.md)
+- [Some optimizations](./usefull/optimize.md)
 
 ### Information for collaboration
 - [Feature Request](./newFeature.md)
