@@ -1,5 +1,5 @@
 import type { PageI, ListI } from "./types";
-import { City } from "./objects";
+import { City } from "../../base/objects";
 
 export function mapNotionToCity(response: PageI[] | ListI): City[] {
 	if ('results' in response) {

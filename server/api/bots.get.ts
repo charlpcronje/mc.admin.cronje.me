@@ -1,5 +1,5 @@
 import { Client } from "@notionhq/client";
-import { Bot } from "~~/server/utils/objects";
+import { Bot } from "$serverObjets/Bot";
 import { mapNotionToBot } from "~~/server/utils/mapBots";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });

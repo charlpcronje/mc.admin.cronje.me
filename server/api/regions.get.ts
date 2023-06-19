@@ -1,5 +1,5 @@
-import type { User } from "$serverObjects/notion";
-import { getUsers, isAdmin } from "#serverModels/user";
+import type { User } from "~/types/objects";
+import { getUsers, isAdmin } from "~/server/models/user";
 
 export default defineEventHandler(async (event) => {
     if (!isAdmin(event.context.user)) {

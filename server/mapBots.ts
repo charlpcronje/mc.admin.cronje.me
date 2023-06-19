@@ -1,5 +1,5 @@
 import type { PageI, ListI } from "./types";
-import { Bot } from "./objects";
+import { Bot } from "./objects/notion";
 
 export function mapNotionToBot(response: PageI[] | ListI): Bot[] {
 	if ('results' in response) {

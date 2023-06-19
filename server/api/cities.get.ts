@@ -1,5 +1,5 @@
 import { Client } from "@notionhq/client";
-import { City } from "~~/server/utils/objects";
+import { City } from "~/types/objects";
 import { mapNotionToCity } from "~~/server/utils/mapCities";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
