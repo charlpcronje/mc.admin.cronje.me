@@ -8,25 +8,33 @@
 01101101 01100001 01101100 01101100 00101110 01100011 01101000 01100001 01110100 00101110 
 01100011 01110010 01101111 01101110 01101010 01100101 00101110 01101101 01100101 
 ```
-> Mall Chat Bot Generator
-
-- [Presentation](./presentation.md)
-- [Getting Started](./gettingStarted.md)
+# Mall Chat Bot Generator
+- [Presentation](./presentation/README.md)
+- [Getting Started](./todo/gettingStarted.md)
 - [Current Progress](./curretProgress.md)
 - [Metal Vector Database for long term Memory](./metalVector.md)
-- [Themes](./themes.md)
+- [Themes](./ui/themes.md)
+
+## Code Helpers
+
+- Some of the code might be a bit confusing, so here is a quick explanation of what is going on.
+- GitHub Copilot is good at some stuff but not at indexing my code for context search. So I am using SourceGraph for this. 
+- But I this is a manual process to index my code for that: [Indexing my code for SourceGraph](./indexingMyCode.md)
+
+### Server API
+- [../server/api/users.get.ts](../server/api/users.get.ts) explained by[explain.users.get.ts.md](./explained/explain.users.get.ts.md) 
 
 
 ### TODO
-- [Implement Pinia Persistance ](https://nuxt.com/modules/pinia-plugin-persistedstate)
-- [Implement Nuxt-Viewport Module](https://nuxt.com/modules/nuxt-viewport)
-- [Implement nuxt-session](https://nuxt.com/modules/session)
+- [ ][Implement Pinia Persistance ](https://nuxt.com/modules/pinia-plugin-persistedstate)
+- [ ][Implement Nuxt-Viewport Module](https://nuxt.com/modules/nuxt-viewport)
+- [ ][Implement nuxt-session](https://nuxt.com/modules/session)
 - [Monaco Editor Code Editor](https://microsoft.github.io/monaco-editor/)
 - [nuxt-ssr-lit](https://nuxt.com/modules/ssr-lit)
+- [ ][Cool 3D Effect (atroposjs)](https://atroposjs.com/docs#whats-next)
 
 ### Code Snippets
 - [User Authentication](./userAuth.md)
-
 
 ### Notion API and SDK
 - [Notion API](./notion/notionAPI.md)
