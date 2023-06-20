@@ -7,10 +7,22 @@
     "types": [
       "nuxt-windicss",
       "@vueuse/nuxt",
-      //"unplugin-icons/types/vue"
+      "unplugin-icons/types/vue"
     ],
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "paths": {
+      "$serverModels": ["./server/models"],
+      "$serverModels/*": ["./server/models/*"],
+      "$serverInterfaces": ["server/interfaces"],
+      "$serverInterfaces/*": ["server/interfaces/*"],
+      "$serverTypes": ["./server/types"],
+      "$serverTypes/*": ["./server/types/*"],
+      "$serverNotion": ["./server/notion"],
+      "$serverNotion/*": ["./server/notion/*"],
+      "$serverObjects": ["./server/objects"],
+      "$serverObjects/*": ["./server/objects/*"]
+    } 
   }
 }
