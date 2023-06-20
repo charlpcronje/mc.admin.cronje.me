@@ -12,7 +12,7 @@
 - [Presentation](./presentation/README.md)
 - [Getting Started](./todo/gettingStarted.md)
 - [Current Progress](./curretProgress.md)
-- [Metal Vector Database for long term Memory](./metalVector.md)
+- [Metal Vector Database for long term Memory](./packages/metalVector.md)
 - [Themes](./ui/themes.md)
 
 ## Code Helpers
