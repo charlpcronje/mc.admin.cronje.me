@@ -13,15 +13,15 @@ export default defineEventHandler(async (event) => {
     }
 
     const userWithPassword = await getUserByEmailAndPassword(email,password);
-    
-    if (!userWithPassword) {
+    console.log(userWithPassword);
+    if (!userWithPassword) {;
         return createError({
             statusCode: 401,
             message: "Bad credentials"
         });
     }
 
-    if (!userWithPassword.status) {
+    if (!userWithPassword.properties.status) {
         return createError({
             statusCode: 401,
             message: "User Deactivated"
@@ -41,7 +41,7 @@ export default defineEventHandler(async (event) => {
     */
     const config = useRuntimeConfig();
 
-    const session = serialize({ userId: userWithPassword.id });
+    const session = serialize({ userId: userWithPassword.properties.id });
     const signedSession = sign(session, config.cookieSecret);
 
     setCookie(event, config.cookieName, signedSession, {
@@ -55,7 +55,7 @@ export default defineEventHandler(async (event) => {
     });
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { password: _password, ...userWithoutPassword } = userWithPassword;
+    const { password: _password, ...userWithoutPassword } = userWithPassword.properties;
 
     return {
         user: userWithoutPassword,
