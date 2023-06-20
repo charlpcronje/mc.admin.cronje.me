@@ -4,25 +4,31 @@ import { ModuleOptions as NuxtWindiCssModuleOptions } from 'nuxt-windicss'
 import { ModuleOptions as NuxtContentModuleOptions } from '@nuxt/content'
 
 declare module '@nuxt/schema' {
-  interface AppConfigInput {
-    name: string
-    author: {
-      name: string
-      link: string
+    interface AppConfigInput {
+        name: string
+        author: {
+            name: string
+            link: string
+        }
     }
-  }
 }
 
 declare module 'nuxt/config' {
-  interface NuxtConfig {
-    intlify?: IntlifyModuleOptions
-    vueuse?: VueUseNuxtOptions
-    windicss?: NuxtWindiCssModuleOptions
-    content?: Partial<NuxtContentModuleOptions>
-    image?: any
-    elementPlus?: any
-    devtools?: any
-  }
+    interface NuxtConfig {
+        intlify?: IntlifyModuleOptions
+        vueuse?: VueUseNuxtOptions
+        windicss?: NuxtWindiCssModuleOptions
+        content?: Partial<NuxtContentModuleOptions>
+        image?: any
+        elementPlus?: any
+        devtools?: any
+    }
 }
 
-export {}
+declare global {
+    function isDev(): boolean
+    function isProd(): boolean
+    function isStage(): boolean
+}
+
+export { }
