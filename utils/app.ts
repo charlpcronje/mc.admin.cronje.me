@@ -1,5 +1,6 @@
 import { ThemeManager } from './theme'
 import { LanguageManager } from './lang'
+import './helpers';
 
 export function AppSetup() {
   // use theme manager
