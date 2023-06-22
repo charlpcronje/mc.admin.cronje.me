@@ -26,9 +26,11 @@ declare module 'nuxt/config' {
 }
 
 declare global {
-    function isDev(): boolean
-    function isProd(): boolean
-    function isStage(): boolean
+    class ENV  {
+        static isDev: boolean
+        static isProd: boolean
+        static isStage: boolean
+    };
 }
 
 export { }
