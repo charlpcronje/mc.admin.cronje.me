@@ -1,5 +1,3 @@
-export 
-
 export interface ResponseI {
     object: 'list';
     results: PageI[];
@@ -28,17 +26,17 @@ export interface CompanyPropertiesI extends pagePropertiesI {
 }
 
 export interface UserPropertiesI extends pagePropertiesI {
-    id: number;
-    status: boolean;
-    avatar: string;
-    fullName: string;
-    emailAddress: string;
-    password: string;
-    company: string;
-    roles: string[];
+    id?: number;
+    status?: boolean;
+    avatar?: string;
+    fullName?: string;
+    emailAddress?: string;
+    password?: string;
+    company?: string;
+    roles?: string[];
 
     // Relations
-    companyRelation: string;
+    companyRelation?: string;
 }
 
 export interface BotPropertiesI extends pagePropertiesI {
