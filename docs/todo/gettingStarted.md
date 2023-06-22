@@ -4,8 +4,6 @@ For this project I will be using the following packages
 
 - [Nuxt 3](https://nuxt.com)
 - [Tailwind CSS](https://tailwindcss.co)
-- [DaisyUI](https://daisyui.com)
-- [Pinia](https://pinia.vuejs.org) 
 - [Notion API](https://developers.notion.com)
 
 
