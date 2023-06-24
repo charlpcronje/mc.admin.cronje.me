@@ -1,14 +1,14 @@
 import { Client } from "@notionhq/client";
-import { Bot } from "$serverObjets/Bot";
-import { mapNotionToBot } from "~~/server/utils/mapBots";
+import { NotionBot } from "$notion/objects";
+import { mapNotionToBot } from "$notion/mappings";
+import { user } from "$models/user";
+import { BotPropertiesI } from "~/notion/interfaces";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_BOTS_DB!;
 
-import { isAdmin, isUser, isAgent, isManager } from "~/server/models/user";
-
 export default defineEventHandler(async (event) => {
-    if (!isAdmin(event.context.user) && !isAgent(event.context.user) && !isManager(event.context.user)) {
+    if (user.isGuest) {
         return createError({
             statusCode: 401,
             message: "You don't have the rights to access this resource",
@@ -18,6 +18,6 @@ export default defineEventHandler(async (event) => {
     const data:any = await notion.databases.query({
         database_id: DB
     });
-    const bots: Bot[] = mapNotionToBot(data);
+    const bots: NotionBot[] | BotPropertiesI[] = mapNotionToBot(data);
     return bots;
 });

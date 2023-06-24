@@ -4,9 +4,16 @@ export interface ResponseI {
     next_cursor: string | null;
     has_more: boolean;
     type: 'list' | 'page' | 'database' | 'workspace' | 'user' | 'block' | 'collection_view' | 'collection' | 'notion_user' | 'space' | 'space_view' | 'comment' | 'discussion' | 'discussion_comment' | 'block' | 'list' | 'to_do' | 'heading' | 'paragraph' | 'bulleted_list_item' | 'numbered_list_item' | 'toggle' | 'code' | 'bookmark' | 'image' | 'video' | 'file' | 'audio' | 'pdf' | 'equation' | 'factory' | 'table_of_contents' | 'breadcrum';
+    [key: string]: any;
 }
 
-export type pagePropertiesI {
+export interface NotionQueryDatabaseResponse {
+    [key: string]: any | any[];
+}
+
+
+
+export interface pagePropertiesI {
     [key: string]: any;
 }
 
@@ -128,9 +135,11 @@ export interface PageI {
         database_id?: string;
     }
     archived?: boolean;
-    properties?: UserPropertiesI | BotPropertiesI | CityPropertiesI | CompanyPropertiesI | RegionPropertiesI | MallPropertiesI;
+    properties?: UserPropertiesI | BotPropertiesI | CityPropertiesI | CompanyPropertiesI | RegionPropertiesI | MallPropertiesI | any;
     url?: string;
     public_url?: string | null;
-
+    logProps?(): void;
     [key: string]: any | Function;
 }  
+
+export type UserWithoutPassword = Omit<PageI["properties"], "password">;

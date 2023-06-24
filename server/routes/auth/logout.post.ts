@@ -1,3 +1,4 @@
+import { User } from "$models/user";
 export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
 
@@ -5,10 +6,10 @@ export default defineEventHandler(async (event) => {
         httpOnly: true,
         path: "/",
         sameSite: "strict",
-        secure: process.env.NODE_ENV === "production",
+        secure: ENV.isProd,
     });
 
     return {
-        user: null,
+        user: new User({}),
     };
 });

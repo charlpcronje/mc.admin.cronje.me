@@ -1,24 +1,26 @@
 import { Client } from "@notionhq/client";
-import { City } from "~/types/objects";
-import { mapNotionToCity } from "~~/server/utils/mapCities";
+import { NotionCity } from "$notion/objects";
+import { mapNotionToCity } from "$notion/mappings";
+import { useAuth } from "~/composables/auth";
+import { User } from "$models/user";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_CITIES_DB!;
-
-import { isAdmin, isAgent, isManager } from "~/server/models/user";
+const { me } = useAuth();
+const user = new User(me);
 
 export default defineEventHandler(async (event) => {
-    if (!isAdmin(event.context.user) && !isAgent(event.context.user) && !isManager(event.context.user)) {
+    if (user.isGuest) {
         return createError({
             statusCode: 401,
             message: "You don't have the rights to access this resource",
         });
     }
 
-    const data:any = await notion.databases.query({
+    const data: any = await notion.databases.query({
         database_id: DB
     });
-    const cities: City[] = mapNotionToCity(data);
+    const cities: NotionCity[] = mapNotionToCity(data);
     return cities;
 });
 

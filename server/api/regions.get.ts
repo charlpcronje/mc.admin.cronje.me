@@ -1,18 +1,23 @@
-import type { User } from "~/types/objects";
-import { getUsers, isAdmin } from "~/server/models/user";
+import { Client } from "@notionhq/client";
+import { NotionRegion } from "$notion/objects";
+import { mapNotionToRegion } from "$notion/mappings";
+import { user } from "$models/user";
+import { RegionPropertiesI } from "~/notion/interfaces";
+
+const notion = new Client({ auth: process.env.NOTION_API_KEY! });
+const DB = process.env.NOTION_BOTS_DB!;
 
 export default defineEventHandler(async (event) => {
-    if (!isAdmin(event.context.user)) {
+    if (user.isGuest) {
         return createError({
             statusCode: 401,
             message: "You don't have the rights to access this resource",
         });
     }
 
-    const usersWithPassword: User[] = await getUsers();
-    const usersWithoutPassword = usersWithPassword.map(user => {
-        const { password, ...userWithoutPassword } = user.properties;
-        return { ...user, properties: userWithoutPassword };
+    const data:any = await notion.databases.query({
+        database_id: DB
     });
-    return usersWithoutPassword;
+    const regions: NotionRegion[] | RegionPropertiesI[] = mapNotionToRegion(data);
+    return regions;
 });

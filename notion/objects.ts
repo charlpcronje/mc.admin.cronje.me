@@ -1,6 +1,6 @@
-import { PageI, UserPropertiesI, BotPropertiesI, CityPropertiesI, CompanyPropertiesI, MallPropertiesI, RegionPropertiesI } from '$serverNotion/interfaces';
+import { NotionQueryDatabaseResponse, PageI, UserPropertiesI, BotPropertiesI, CityPropertiesI, CompanyPropertiesI, MallPropertiesI, RegionPropertiesI } from '$notion/interfaces';
 import { Client } from "@notionhq/client";
-import { mapNotionToCity, mapNotionToUser } from '$notion/mappings';
+import { mapNotionToUser } from '$notion/mappings';
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_USERS_DB!;
 
@@ -8,14 +8,14 @@ export class Page implements PageI {
     [prop: string]: any;
 
     constructor(page: PageI) {
-        if (isDev())  {
+        if (ENV.isDev)  {
             console.log(`%cInstantiating ${this.constructor.name}`, 'color: green; font-weight: bold;');
         }
         Object.assign(this, page);
     }
 
     logProps(instanceMsg:any | null = null) {
-        if (isDev()) { 
+        if (ENV.isDev) { 
             if (instanceMsg)  {
                 console.log(`%c${instanceMsg}, 'color: lightgreen'`);
             }
@@ -32,10 +32,10 @@ export class Page implements PageI {
 
 
 // Sample data for Bot that extends Page: <a href="~/docs/data/bot.json" target="_blank">bot.json</a>
-class NotionBot extends Page implements PageI {
+export class NotionBot extends Page implements PageI {
     properties: BotPropertiesI;
 
-    constructor(bot: PageI,instanceMsg: string | null) {
+    constructor(bot: PageI,instanceMsg: string | undefined = '') {
         super(bot);
         const props = bot.properties!;
         this.properties = {
@@ -61,7 +61,7 @@ class NotionBot extends Page implements PageI {
 export class NotionCity extends Page implements PageI {
     properties: CityPropertiesI;
 
-    constructor(city: PageI,instanceMsg: string | null) {
+    constructor(city: PageI,instanceMsg: string | undefined = '') {
         super(city);
         const props = city.properties!;
         this.properties = {
@@ -88,10 +88,10 @@ export class NotionCity extends Page implements PageI {
 }
 
 // Sample data for Company that extends Page: <a href="~/docs/data/company.json" target="_blank">company.json</a>
-export export class NotionCompany extends Page implements PageI {
+export class NotionCompany extends Page implements PageI {
     properties: CompanyPropertiesI;
 
-    constructor(company: PageI,instanceMsg: string | null) {
+    constructor(company: PageI,instanceMsg: any | undefined = '') {
         super(company);
         const props = company.properties!;
         this.properties = {
@@ -116,7 +116,7 @@ export export class NotionCompany extends Page implements PageI {
 export class NotionRegion extends Page implements PageI {
     properties: RegionPropertiesI;
 
-    constructor(region: PageI,instanceMsg: string | null) {
+    constructor(region: PageI,instanceMsg: any | undefined = '') {
         super(region);
         const props = region.properties!;
         this.properties = {
@@ -142,7 +142,7 @@ export class NotionRegion extends Page implements PageI {
 export class NotionMall extends Page implements PageI {
     properties: MallPropertiesI;
 
-    constructor(mall: PageI,instanceMsg: string | null) {
+    constructor(mall: PageI,instanceMsg: any | undefined = '') {
         super(mall);
         const props = mall.properties!;
         this.properties = {
@@ -168,12 +168,12 @@ export class NotionMall extends Page implements PageI {
         this.logProps(instanceMsg);
     }
 }
-    
+
 // Sample data for User that extends Page: <a href="~/docs/data/user.json" target="_blank">user.json</a>
 export class NotionUser extends Page implements PageI {
     properties: UserPropertiesI;
     
-    constructor(user: PageI,instanceMsg: any | undefined) {
+    constructor(user: PageI,instanceMsg: any | undefined = '') {
         super(user);
         const props = user.properties!;
         console.log("PROPS",props);
@@ -204,8 +204,8 @@ async function getUserByEmail(email: string) {
             },
         },
     });
-    const user = mapNotionToUser(data)[0];
-    return new User(user.properties);
+    const user = mapNotionToUser(data);
+    return new NotionUser(user[0].properties);
 }
 
 async function getUserByEmailAndPassword(email: string, password:string) {
@@ -229,7 +229,20 @@ async function getUserByEmailAndPassword(email: string, password:string) {
     return mapNotionToUser(data)[0];
 }
 
-export async function getUsers():Promise<NotionUser[]> {
+async function getUserById(id: number) {
+    const data:any = await notion.databases.query({
+        database_id: DB,
+        filter: {
+            property: 'ID',
+            number: {
+                equals: id,
+            },
+        },
+    });
+    return mapNotionToUser(data.results)[0];
+}
+
+export async function getUsers():Promise<NotionUser[] | UserPropertiesI[]> {
     const data:any = await notion.databases.query({
         database_id: DB
     });

@@ -1,4 +1,4 @@
-import { getUserByEmailAndPassword } from "~~/server/models/user";
+import { getUserByEmailAndPassword } from "$models/user";
 
 export default defineEventHandler(async (event) => {
     const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
