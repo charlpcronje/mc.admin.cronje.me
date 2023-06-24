@@ -122,3 +122,62 @@ export const User = (() => {
 export const user = new User();
 
 
+async function getUserByEmail(email: string) {
+    const data:any = await notion.databases.query({
+        database_id: DB,
+        filter: {
+            property: 'Email Address',
+            rich_text: {
+                equals: email,
+            },
+        },
+    });
+    const user = mapNotionToUser(data);
+    return new NotionUser(user[0].properties);
+}
+
+async function getUserByEmailAndPassword(email: string, password:string) {
+    const data:any = await notion.databases.query({
+        database_id: DB,
+        filter: {
+            and: [{
+                    property: 'Email Address',
+                    rich_text: {
+                        equals: email,
+                    },
+                },{
+                    property: 'Password',
+                    rich_text: {
+                        equals: password,
+                    },
+                },
+            ],
+        }
+    });
+    return mapNotionToUser(data)[0];
+}
+
+async function getUserById(id: number) {
+    const data:any = await notion.databases.query({
+        database_id: DB,
+        filter: {
+            property: 'ID',
+            number: {
+                equals: id,
+            },
+        },
+    });
+    return mapNotionToUser(data.results)[0];
+}
+
+export async function getUsers():Promise<NotionUser[] | UserPropertiesI[]> {
+    const data:any = await notion.databases.query({
+        database_id: DB
+    });
+    const users = mapNotionToUser(data);
+    return users;
+}
+
+
+
+
