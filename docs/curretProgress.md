@@ -353,7 +353,7 @@ export { useAdmin } from "./auth/useAdmin";
 ```ts
 // useAuth.ts
 import { useAuthUser } from "./useAuthUser";
-import type { User } from "~~/types";
+import type { User } from "~/notion/types";
 
 export const useAuth = () => {
     const authUser = useAuthUser();

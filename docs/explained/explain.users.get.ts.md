@@ -1,23 +1,30 @@
 
-export default defineEventHandler(async (event) => {This line defines an API endpoint handler function that will be executed asynchronously.
+`export default defineEventHandler(async (event) => {`
+This line defines an API endpoint handler function that will be executed asynchronously.
 
-if (!isAdmin(event.context.user)) {This line checks if the user making the request is an admin.
+`if (!isAdmin(event.context.user)) {`
+This line checks if the user making the request is an admin.
 
-return createError({statusCode: 401, message: "You don't have the rights to access this resource",});If the user is not an admin, a 401 Unauthorized error is returned.
+`return createError({statusCode: 401, message: "You don't have the rights to access this resource",});`
+If the user is not an admin, a 401 Unauthorized error is returned.
 
-const usersWithPassword: User[] = await getUsers();This line fetches all users with passwords from the database and stores them in the usersWithPassword array.
+`const usersWithPassword: User[] = await getUsers();`
+This line fetches all users with passwords from the database and stores them in the usersWithPassword array.
 
-const usersWithoutPassword = usersWithPassword.map(user => {This line uses .map() to iterate over each user object in usersWithPassword.
+`const usersWithoutPassword = usersWithPassword.map(user => {`
+This line uses .map() to iterate over each user object in usersWithPassword.
 
-const { password, ...userWithoutPassword } = user.properties;This line uses object destructuring to extract the password property into password and the remaining properties into userWithoutPassword.
+`const { password, ...userWithoutPassword } = user.properties;`
+This line uses object destructuring to extract the password property into password and the remaining properties into userWithoutPassword.
 
-return { ...user, properties: userWithoutPassword };This line returns a new user object with the password property removed.
+`return { ...user, properties: userWithoutPassword };`
+This line returns a new user object with the password property removed.
 
-});This closes the .map() method call.
+`});`This closes the .map() method call.
 
-return usersWithoutPassword;This line returns the array of users with the password properties removed.
+`return usersWithoutPassword;`This line returns the array of users with the password properties removed.
 
-The overall purpose of this code is to fetch all users, remove their password properties, and return the users to the API caller.
+The overall purpose of this code is to fetch all `users`, remove their password properties, and return the `users` to the API caller.
 
 Please let me know if any part of this explanation needs clarification or expansion. I aimed to be as detailed as possible given the limited context provided.
 
