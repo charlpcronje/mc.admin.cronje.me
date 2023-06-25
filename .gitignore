@@ -25,3 +25,6 @@ jsDocs
 
 # Buildt
 .buildt
+
+# Batch
+run.bat
