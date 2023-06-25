@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
+import { user } from "~/models/user";
 
 definePageMeta({
     middleware: ["user-only"],
@@ -33,7 +34,7 @@ useHead(() => ({
       </PageHeader>
       <PageBody>
         <PageSection>
-            <PageUser :user="currentUser" />
+            <PageUser :user="user" />
         </PageSection>
       </PageBody>
     </PageWrapper>

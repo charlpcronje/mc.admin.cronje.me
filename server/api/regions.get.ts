@@ -1,8 +1,8 @@
 import { Client } from "@notionhq/client";
-import { NotionRegion } from "$notion/objects";
-import { mapNotionToRegion } from "$notion/mappings";
-import { user } from "$models/user";
-import { RegionPropertiesI } from "~/notion/interfaces";
+import { NotionRegion } from "~/notion/objects";
+import { mapNotionToRegion } from "~/notion/mappings";
+import { user } from "~/models/user";
+import { RegionPropertiesI } from "~/notion/types";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_BOTS_DB!;

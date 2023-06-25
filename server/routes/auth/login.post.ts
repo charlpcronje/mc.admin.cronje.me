@@ -1,8 +1,11 @@
-import { getUserByEmailAndPassword } from "$models/user";
+import { getUserByEmailAndPassword } from "~/models/user";
+import { User } from "~/models/user";
+import {UserPropertiesI} from "~/notion/types";
 
-export default defineEventHandler(async (event) => {
+export default eventHandler(async (event):Promise<UserPropertiesI> => {
     const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
-
+    
+    event.context.session.user = {};
     const { email, password, rememberMe } = body;
 
     if (!email || !password) {
@@ -13,7 +16,9 @@ export default defineEventHandler(async (event) => {
     }
 
     const userWithPassword = await getUserByEmailAndPassword(email,password);
+    console.log("USER WITH PASSWORD");
     console.log(userWithPassword);
+
     if (!userWithPassword) {;
         return createError({
             statusCode: 401,
@@ -28,7 +33,13 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    /* When passwords will be encrypted for now the 
+    event.context.session.user = {};
+    const user = new User(userWithPassword.properties);
+    if (user) {
+        event.context.session.user = user;
+    }
+
+    /* When passwords will be encrypted for now the
     password is verified by filtering on email and password from notion
     const verified = await verify(password, userWithPassword.password);
 

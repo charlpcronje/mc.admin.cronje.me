@@ -53,6 +53,8 @@
 - [Pinia Store](./packages/piniaStore.md)
 - [Nuxt Icon Docs](./packages/nuxtIcon.md)
   - [Nuxt Icons](https://icones.js.org)
+- [Nuxt Session](./packages/nuxtSession.md)
+- - [useNuxtApp](./composables/useNuxtApp.md)
 - [Element Plus Nuxt](./packages/elementPlusNuxt.md)
 - [Nuxt Viewport](./packages/nuxtViewPort.md)
 - [Nuxt ChatGPT](./packages/nuxtChatGPT.md)

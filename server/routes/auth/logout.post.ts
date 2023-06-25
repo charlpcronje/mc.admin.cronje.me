@@ -1,12 +1,12 @@
-import { User } from "$models/user";
-export default defineEventHandler(async (event) => {
+import { User } from "~/models/user";
+export default defineEventHandler(async (event:any) => {
     const config = useRuntimeConfig();
 
     deleteCookie(event, config.cookieName, {
         httpOnly: true,
         path: "/",
         sameSite: "strict",
-        secure: ENV.isProd,
+        secure: process.env.NODE_ENV != 'development',
     });
 
     return {

@@ -14,6 +14,7 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
 import LoginPage from '@/components/LoginPage.vue'
+import { user } from "~/models/user";
 // composable
 const { t } = useLang()
 
@@ -33,14 +34,8 @@ useHead(() => ({
   ],
 }))
 
-const currentUser = useAuthUser();
-const isAdmin = useAdmin();
-
-
-
 async function onLoginSuccess() {
-    const redirect = isAdmin.value ? "/admin" : "/private";
-
+    const redirect = user.isAdmin ? "/admin" : "/private";
     await navigateTo(redirect);
 }
 </script>

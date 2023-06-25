@@ -1,5 +1,5 @@
-import type { MallPropertiesI, PageI, RegionPropertiesI, ResponseI, UserPropertiesI, CompanyPropertiesI, BotPropertiesI, CityPropertiesI } from "$notion/interfaces";
-import { NotionUser, NotionCity, NotionBot, NotionRegion, NotionCompany, NotionMall } from "$notion/objects";
+import type { MallPropertiesI, PageI, RegionPropertiesI, ResponseI, UserPropertiesI, CompanyPropertiesI, BotPropertiesI, CityPropertiesI } from "~/notion/types";
+import { NotionUser, NotionCity, NotionBot, NotionRegion, NotionCompany, NotionMall } from "~/notion/objects";
 
 export function mapNotionToMall(response: PageI[] | ResponseI,returnPropsOnly: boolean = false): NotionMall[] | MallPropertiesI[] {
 	if ('results' in response) {
@@ -66,7 +66,6 @@ export function mapNotionToUser(response: PageI[] | ResponseI, returnPropsOnly: 
     if ('results' in response) {
         response = response.results;
     }
-    console.log("Map Users", { response });
     const users: NotionUser[] = [];
     response.forEach((page: PageI) => {
         users.push(new NotionUser(page));

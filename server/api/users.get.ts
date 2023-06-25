@@ -1,8 +1,10 @@
-import { NotionUser, getUsers } from "$notion/objects";
-import { user } from "$models/user";
-import { UserPropertiesI } from "$notion/interfaces";
+import { NotionUser,  } from "~/notion/objects";
+import { User, getUsers } from "~/models/user";
+import { UserPropertiesI } from "~/notion/types";
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (event:any) => {
+    const user = new User(event.context.user);
+    console.log(event.context.user);
     if (!user.isAdmin) {
         return createError({
             statusCode: 401,

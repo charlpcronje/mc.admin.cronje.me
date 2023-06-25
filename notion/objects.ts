@@ -1,26 +1,22 @@
-import { NotionQueryDatabaseResponse, PageI, UserPropertiesI, BotPropertiesI, CityPropertiesI, CompanyPropertiesI, MallPropertiesI, RegionPropertiesI } from '$notion/interfaces';
-import { Client } from "@notionhq/client";
-import { mapNotionToUser } from '$notion/mappings';
-const notion = new Client({ auth: process.env.NOTION_API_KEY! });
-const DB = process.env.NOTION_USERS_DB!;
+import { PageI, UserPropertiesI, BotPropertiesI, CityPropertiesI, CompanyPropertiesI, MallPropertiesI, RegionPropertiesI } from '~/notion/types';
 
 export class Page implements PageI {
     [prop: string]: any;
 
     constructor(page: PageI) {
-        if (ENV.isDev)  {
-            console.log(`%cInstantiating ${this.constructor.name}`, 'color: green; font-weight: bold;');
+        if (process.env.NODE_ENV === 'development')  {
+            //console.log(`Instantiating ${this.constructor.name}`);
         }
         Object.assign(this, page);
     }
 
     logProps(instanceMsg:any | null = null) {
-        if (ENV.isDev) { 
+        if (process.env.NODE_ENV === 'development') { 
             if (instanceMsg)  {
-                console.log(`%c${instanceMsg}, 'color: lightgreen'`);
+                //console.log(instanceMsg);
             }
-            console.table(`%c${this.properties}, 'color: lightgreen'`);
-            console.log(`%cInstantiated ${this.constructor.name}`, 'color: green; font-weight: bold;');
+            //console.info(this.properties);
+            //console.log(`Instantiated ${this.constructor.name}`);
             
             /*
             Object.keys(this).forEach(prop => {
