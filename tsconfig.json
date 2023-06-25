@@ -38,11 +38,7 @@
       "#imports": [".nuxt/imports"],
       "#build": [".nuxt"],
       "#build/*": [".nuxt/*"],
-      "#components": [".nuxt/components"],
-      "$models":       ["./models"],
-      "$models/*":     ["./models/*"],
-      "$notion":       ["./notion"],
-      "$notion/*":     ["./notion/*"]
+      "#components": [".nuxt/components"]
     } 
   }
     
