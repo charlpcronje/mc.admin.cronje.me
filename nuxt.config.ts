@@ -37,10 +37,11 @@ export default defineNuxtConfig({
         '@nuxt/content',
         '@vueuse/nuxt',
         'nuxt-windicss',
-        '@nuxt/image',
         'nuxt-icon',
         '@element-plus/nuxt',
         '@nuxt/devtools',
+        '@pinia/nuxt',
+        '@sidebase/nuxt-session'
     ],
     devtools: {
         // Enable devtools (default: true)

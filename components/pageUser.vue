@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UserWithoutPassword } from "$notion/interfaces";
+import type { UserWithoutPassword } from "~/notion/types";
 
 defineProps<{ user: UserWithoutPassword | null }>();
 </script>
