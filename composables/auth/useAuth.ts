@@ -1,12 +1,14 @@
 import { useAuthUser } from "./useAuthUser";
 import { User } from "~/models/user";
-import { UserPropertiesI } from "$notion/interfaces";
+import { UserPropertiesI } from "~/notion/types";
 
 export const useAuth = () => {
     const authUser = useAuthUser();
 
     const setUser = (user: UserPropertiesI | undefined) => {
-        authUser.value = new User(user);
+        // Set user singleton
+        new User(user);
+        authUser.value = user;
     };
 
     const setCookie = (cookie: any) => {
@@ -22,7 +24,6 @@ export const useAuth = () => {
                 rememberMe,
             },
         });
-
         setUser(data.user);
         return authUser;
     };
