@@ -2,7 +2,6 @@
 import { AppConfigInput } from '@nuxt/schema'
 import { AppSetup } from './utils/app'
 import { ITheme } from './utils/theme'
-import './utils/helpers'
 AppSetup()
 const theme = useState<ITheme>('theme.current')
 const locale = useState<string>('locale.setting')
@@ -26,8 +25,7 @@ useHead({
 <template>
   <Html :class="`${theme === 'dark' ? 'dark' : ''}`" :lang="locale">
     <Body
-      class="antialiased duration-300 transition-colors text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 overscroll-y-none"
-    >
+      class="antialiased duration-300 transition-colors text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 overscroll-y-none">
       <NuxtLayout>
         <NuxtLoadingIndicator :height="5" :duration="3000" :throttle="400" />
         <NuxtPage />

@@ -17,6 +17,10 @@ dist
 .vercel
 .vscode
 .editorconfig
+.stackblitzrc
+.prettierrc
+.eslintrc
+.eslintignore
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
