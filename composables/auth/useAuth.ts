@@ -6,9 +6,11 @@ export const useAuth = () => {
     const authUser = useAuthUser();
 
     const setUser = (user: UserPropertiesI | undefined) => {
+        if (user) {
         // Set user singleton
-        new User(user);
-        authUser.value = user;
+            new User(user);
+            authUser.value = user;
+        };  
     };
 
     const setCookie = (cookie: any) => {

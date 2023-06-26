@@ -7,6 +7,8 @@ export interface ResponseI {
     [key: string]: any;
 }
 
+export type role = "Admin" | "Agent" | "Client" | "Manager";
+
 export interface NotionQueryDatabaseResponse {
     [key: string]: any | any[];
 }
@@ -33,18 +35,17 @@ export interface CompanyPropertiesI extends pagePropertiesI {
 }
 
 export interface UserPropertiesI extends pagePropertiesI {
-    id?: number;
-    status?: boolean;
+    id: number;
+    status: boolean;
     avatar?: string;
-    fullName?: string;
-    emailAddress?: string;
-    password?: string;
+    fullName: string;
+    emailAddress: string;
+    password: string;
     company?: string;
-    roles?: string[];
+    roles?: role[];
 
     // Relations
     companyRelation?: string;
-    prototype?: void;
 }
 
 export interface BotPropertiesI extends pagePropertiesI {

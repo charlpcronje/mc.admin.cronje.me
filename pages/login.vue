@@ -12,9 +12,11 @@
 </template>
 
 <script lang="ts" setup>
-import { capitalize } from '~/utils/str'
-import LoginPage from '@/components/LoginPage.vue'
-import { user } from "~/models/user";
+import { capitalize } from '~/utils/str';
+import LoginPage from '@/components/LoginPage.vue';
+import { useUserStore } from '~/stores/user';
+const {userState} = useUserStore();
+
 // composable
 const { t } = useLang()
 
@@ -35,7 +37,8 @@ useHead(() => ({
 }))
 
 async function onLoginSuccess() {
-    const redirect = user.isAdmin ? "/admin" : "/private";
+    //const redirect = userState.value.isAdmin ? "/admin" : "/private";
+    const redirect = false ? "/admin" : "/private";
     await navigateTo(redirect);
 }
 </script>

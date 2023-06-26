@@ -2,40 +2,49 @@ import type { PageI, ResponseI, UserPropertiesI } from "~/notion/types";
 import { Client } from "@notionhq/client";
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });
 const DB = process.env.NOTION_USERS_DB!;
+import type { role } from "~/notion/types";
 import { NotionUser } from "~/notion/objects";
 import { mapNotionToUser } from '~/notion/mappings';
 
 export const User = (() => {
-    let instance: User | null = null;
-    type role = "Admin" | "Agent" | "Client" | "Manager";
 
     class User implements UserPropertiesI {
         [key: string]: any;
-        id?: number;
+        id: number;
         status: boolean = true;
         avatar?: string;
-        fullName?: string;
-        emailAddress?: string;
-        password?: string;
+        fullName: string;
+        emailAddress: string;
+        password: string;
         company?: string;
-        roles?: role[] = [];
+        roles?: role[];
         companyRelation?: string;
 
-        constructor(user?: UserPropertiesI) {
-            // If new User details are passed then the singleton will be overwritten with the new user's details             
-            if (user && user.id) {
-                Object.assign(this, user);
-                instance = this;
-            }
-            // If no new User details are passed then the singleton will be returned
-            if (!instance) {
-                instance = this;
-            }
+        constructor(user: UserPropertiesI) {
+            console.log(user);
+            this.id = user.id;
+            this.status = user.status;
+            this.avatar = user.avatar;
+            this.fullName = user.fullName;
+            this.emailAddress = user.emailAddress;
+            this.password = user.password;
+            this.company = user.company;
+            this.roles = user.roles;
+            this.companyRelation = user.companyRelation;
+        }
 
-            if (!instance && !user) {
-                throw new Error("User is not logged in");
-            }
-            return instance;
+        toJSON() {
+            return {
+                id : this.id,
+                status : this.status,
+                avatar : this.avatar,
+                fullName : this.fullName,
+                emailAddress : this.emailAddress,
+                password : this.password,
+                company : this.company,
+                roles : this.roles,
+                companyRelation : this.companyRelation
+            };
         }
 
         get isLogged(): boolean {
@@ -44,7 +53,6 @@ export const User = (() => {
 
         hasRole(role: role): boolean {
             if (!this.roles) return false;
-
             return this.roles.includes(role);
         }
 
@@ -70,8 +78,6 @@ export const User = (() => {
     return User;
     
 })();
-export const user = new User();
-
 
 export async function getUserByEmail(email: string) {
     const data:any = await notion.databases.query({

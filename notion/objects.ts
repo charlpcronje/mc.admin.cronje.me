@@ -168,11 +168,11 @@ export class NotionMall extends Page implements PageI {
 // Sample data for User that extends Page: <a href="~/docs/data/user.json" target="_blank">user.json</a>
 export class NotionUser extends Page implements PageI {
     properties: UserPropertiesI;
-    
+    [key: string]: any | undefined | UserPropertiesI | PageI;
+
     constructor(user: PageI,instanceMsg: any | undefined = '') {
         super(user);
         const props = user.properties!;
-        console.log("PROPS",props);
         this.properties = {
             id: props.ID.unique_id.number,
             status: props.Status.checkbox,
