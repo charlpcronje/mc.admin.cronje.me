@@ -1,9 +1,10 @@
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 // @ts-ignore
 export default defineNuxtConfig({
+
+
     // server side rendering mode
     ssr: true,
 
@@ -22,16 +23,31 @@ export default defineNuxtConfig({
 
     // plugins
     plugins: [
+        '~/plugins/pinia.ts',
         '~/plugins/navbar.ts'
     ],
 
     // build
     build: {
         transpile: ['@headlessui/vue'],
+        // extend(config: any, { isDev, isClient }: { isDev: boolean, isClient: boolean }) {
+        //     if (isDev && isClient) {
+        //         config.module.rules.push({
+        //             enforce: 'pre',
+        //             test: /\.(js|ts|vue)$/,
+        //             loader: 'source-map-loader',
+        //             exclude: [
+        //                 /node_modules\/element-plus/
+        //             ]
+        //         })
+        //     }
+        // },
+        verbose: false
     },
 
     // modules
     modules: [
+        '@pinia/nuxt',
         'unplugin-icons/nuxt',
         '@intlify/nuxt3',
         '@nuxt/content',
@@ -40,7 +56,6 @@ export default defineNuxtConfig({
         'nuxt-icon',
         '@element-plus/nuxt',
         '@nuxt/devtools',
-        '@pinia/nuxt',
         '@sidebase/nuxt-session'
     ],
     devtools: {
