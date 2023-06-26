@@ -5,7 +5,7 @@ import { mapNotionToBot } from "~/notion/mappings";
 import { createPinia, setActivePinia } from "pinia";
 const pinia = createPinia();
 setActivePinia(pinia);
-import { useUserStore } from "~/stores/use";
+import { useUserStore } from "~/stores/user";
 import { BotPropertiesI } from "~/notion/types";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY! });

@@ -23,21 +23,22 @@ export const useUserStore = defineStore('user', (): {
         })
     );
 
-    const signIn = async(formData: Credentials) {
+    const signIn = async(formData: Credentials) => {
         const data:any = await $fetch("/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(formData)
-        })
+        });
         if (data.success) {
-            userState.value = new User(data.user)
+            console.log("New User State:",data);
+            userState.value = new User(data.user);
         }
         return data
     }
      
-    const signOut = async() {
+    const signOut = async() => {
         const data:any = await $fetch("/auth/logout", {
             method: "POST"
         })

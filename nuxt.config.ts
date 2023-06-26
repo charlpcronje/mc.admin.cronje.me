@@ -23,26 +23,12 @@ export default defineNuxtConfig({
 
     // plugins
     plugins: [
-        '~/plugins/pinia.ts',
         '~/plugins/navbar.ts'
     ],
 
     // build
     build: {
-        transpile: ['@headlessui/vue'],
-        // extend(config: any, { isDev, isClient }: { isDev: boolean, isClient: boolean }) {
-        //     if (isDev && isClient) {
-        //         config.module.rules.push({
-        //             enforce: 'pre',
-        //             test: /\.(js|ts|vue)$/,
-        //             loader: 'source-map-loader',
-        //             exclude: [
-        //                 /node_modules\/element-plus/
-        //             ]
-        //         })
-        //     }
-        // },
-        verbose: false
+        transpile: ['@headlessui/vue']
     },
 
     // modules
@@ -52,8 +38,7 @@ export default defineNuxtConfig({
         '@intlify/nuxt3',
         '@nuxt/content',
         '@vueuse/nuxt',
-        'nuxt-windicss',
-        'nuxt-icon',
+        'nuxt-windicss', 'nuxt-icon',
         '@element-plus/nuxt',
         '@nuxt/devtools',
         '@sidebase/nuxt-session'

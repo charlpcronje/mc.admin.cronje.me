@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const emit = defineEmits(["success"]);
-import { useUserStore } from '~/stores/userStore'
-const userStore = useUserStore();
+import { useUserStore } from '~/stores/user'
+const {userState} = useUserStore();
 
 const { login } = useAuth();
 const form = reactive({
@@ -19,11 +19,12 @@ const form = reactive({
 
 async function onLoginClick() {
     try {
+		const {signIn}  = useUserStore();
         form.error = "";
         form.pending = true;
 		const user = { email: form.data.email, password: form.data.password,rememberMe: form.data.rememberMe };
-		userStore.signIn(user)
-        await login(form.data.email,form.data.password,form.data.rememberMe);
+		signIn(form.data)
+        //await login(form.data.email,form.data.password,form.data.rememberMe);
         emit("success");
     } catch (error: any) {
         if (error.data.message) form.error = error.data.message;
