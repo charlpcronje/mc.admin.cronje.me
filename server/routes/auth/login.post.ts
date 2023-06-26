@@ -2,10 +2,9 @@ import { getUserByEmailAndPassword } from "~/models/user";
 import { User } from "~/models/user";
 import {UserPropertiesI} from "~/notion/types";
 
-export default eventHandler(async (event):Promise<UserPropertiesI> => {
+export default eventHandler(async (event):Promise<UserPropertiesI | typeof createError | any> => {
     const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
-    
-    event.context.session.user = {};
+
     const { email, password, rememberMe } = body;
 
     if (!email || !password) {
@@ -16,9 +15,6 @@ export default eventHandler(async (event):Promise<UserPropertiesI> => {
     }
 
     const userWithPassword = await getUserByEmailAndPassword(email,password);
-    console.log("USER WITH PASSWORD");
-    console.log(userWithPassword);
-
     if (!userWithPassword) {;
         return createError({
             statusCode: 401,
@@ -26,15 +22,17 @@ export default eventHandler(async (event):Promise<UserPropertiesI> => {
         });
     }
 
-    if (!userWithPassword.properties.status) {
+    
+    
+    if (!userWithPassword.status) {
         return createError({
             statusCode: 401,
             message: "User Deactivated"
         });
     }
 
-    event.context.session.user = {};
-    const user = new User(userWithPassword.properties);
+    
+    const user = new User(userWithPassword);
     if (user) {
         event.context.session.user = user;
     }
@@ -52,13 +50,12 @@ export default eventHandler(async (event):Promise<UserPropertiesI> => {
     */
     const config = useRuntimeConfig();
 
-    const session = serialize({ userId: userWithPassword.properties.id });
-    const signedSession = sign(session, config.cookieSecret);
+    const session = user.serialize({ userId: userWithPassword.properties.id });
+    const signedSession = user.sign(session, config.cookieSecret);
 
     setCookie(event, config.cookieName, signedSession, {
         httpOnly: true,
-        path: "/",
-        sameSite: "strict",
+        path: "/",        sameSite: "strict",
         secure: process.env.NODE_ENV === "production",
         expires: rememberMe
             ? new Date(Date.now() + config.cookieRememberMeExpires)
@@ -68,7 +65,5 @@ export default eventHandler(async (event):Promise<UserPropertiesI> => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password: _password, ...userWithoutPassword } = userWithPassword.properties;
 
-    return {
-        user: userWithoutPassword,
-    };
+    return user
 });

@@ -1,8 +1,6 @@
 import { User } from "~/models/user";
 import cookieSignature from "cookie-signature";
-import { useCookieHeader } from "~/server/plugins/useCookieHeader";
 
-const { getCookieHeader } = useCookieHeader();
 
 
 interface CookieHeader {
@@ -24,70 +22,67 @@ interface SessionI {
     loadSession(): SessionI;
 }
 
-const Session = (() => {
+export const Session = (() => {
     let instance: BrowserSession | ServerSession | null = null;
     type sessionInterface = BrowserSession | ServerSession | null;
     class BrowserSession {
         [key: string]: any;
-        user: typeof User | null = null;
-        sessionRestored: boolean = false;
-        sessionData?: any = null;
+        static user: typeof User | null = null;
+        static sessionRestored: boolean = false;
+        static sessionData?: any = null;
         
         constructor() {
             if (!instance) {
                 instance = this;
             }
-            window.addEventListener("beforeunload", () => {
-                this.setSession(); // Set the cookie when the page is about to unload
-            });
-            if (!this.sessionRestored) {
-                this.sessionRestored = (this.loadSession()) ? true : false;
+            if (!BrowserSession.sessionRestored) {
+                BrowserSession.sessionRestored = (BrowserSession.loadSession()) ? true : false;
             }
             return instance;
         }
 
-        setSession() {
+        static setSession() {
             const name = process.env.COOKIE_NAME!;
             let expires = "";
             const expirationDays = parseInt(process.env.COOKIE_EXPIRES_DAYS!)
             const expirationDate = new Date();
             expirationDate.setDate(expirationDate.getDate() + expirationDays);
             expires = `; expires=${expirationDate.toUTCString()}`;
-            const value = sign(this.serialize(),process.env.COOKIE_SECRET!);
-            document.cookie = `${name}=${value}${expires}; path=/`;
+            const value = BrowserSession.sign(BrowserSession.serialize(),process.env.COOKIE_SECRET!);
+            //document.cookie = `${name}=${value}${expires}; path=/`;
         }
 
-        serialize() {
-            const value = Buffer.from(JSON.stringify(this), "utf-8").toString("base64");
+        static serialize() {
+            const value = Buffer.from(JSON.stringify(BrowserSession), "utf-8").toString("base64");
             const length = Buffer.byteLength(value);
             if (length > 4096) throw new Error("Session value is too long");
             return value;
         }
 
-        deserialize(value: string) {
+        static deserialize(value: string) {
             const deserializedObject = JSON.parse(Buffer.from(value, "base64").toString("utf-8"));
             const emptySession = new BrowserSession();
             instance = Object.assign(emptySession, deserializedObject);
             return instance;
         }
 
-        sign(value: string, secret: string) {
+        static sign(value: string, secret: string) {
             return cookieSignature.sign(value, secret);
         }
 
-        unsign(value: string, secret: string) {
+        static unsign(value: string, secret: string) {
             return cookieSignature.unsign(value, secret);
         }
 
-        async getUserFromSession() {
-            const session = this.loadSession();
+        static async getUserFromSession() {
+            const session = BrowserSession.loadSession();
 
             // Check if cookie was found
             if (!session) return null;
             return session?.user;
         }
 
-        loadSession(): sessionInterface {
+        static loadSession(): sessionInterface {
             const nameEQ = process.env.COOKIE_NAME! + "=";
             const cookieArray = document.cookie.split(";");
 
@@ -96,116 +91,114 @@ const Session = (() => {
 
                 if (cookie.indexOf(nameEQ) === 0) {
                     const cook = cookie.substring(nameEQ.length, cookie.length);
-                    const unsignedSession = unsign(cook, process.env.COOKIE_SECRET!);
+                    const unsignedSession = BrowserSession.unsign(cook, process.env.COOKIE_SECRET!);
                     if (!unsignedSession) return null;
-                    const session = this.deserialize(unsignedSession);
+                    const session = BrowserSession.deserialize(unsignedSession);
                     return session;
                 }
             }
             return null;
         }
 
-        data(key: any = null, value: any = null, defaultValue: any = null) {
-            if (!key && !value && !defaultValue) return this.sessionData;
-            if (key && !value && !defaultValue) return this.sessionData[key] || null;
-            if (key && value && !defaultValue) return this.sessionData[key] || value;
-            if (key && !value && defaultValue) return this.sessionData[key] || defaultValue;
+        static data(key: any = null, value: any = null, defaultValue: any = null) {
+            if (!key && !value && !defaultValue) return BrowserSession.sessionData;
+            if (key && !value && !defaultValue) return BrowserSession.sessionData[key] || null;
+            if (key && value && !defaultValue) return BrowserSession.sessionData[key] || value;
+            if (key && !value && defaultValue) return BrowserSession.sessionData[key] || defaultValue;
         }
     };
 
     class ServerSession {
         [key: string]: any;
-        user: typeof User | null = null;
-        sessionRestored: boolean = false;
-        sessionData?: any = null;
+        static user: typeof User | null = null;
+        static sessionRestored: boolean = false;
+        static sessionData?: any = null;
         
 
         constructor() {
             if (!instance) {
                 instance = this;
             }
-            window.addEventListener("beforeunload", () => {
-                this.setSession(); // Set the cookie when the page is about to unload
-            });
-            if (!this.sessionRestored) {
-                this.sessionRestored = (this.loadSession()) ? true : false;
+            if (!ServerSession.sessionRestored) {
+                ServerSession.sessionRestored = (ServerSession.loadSession()) ? true : false;
             }
             return instance;
         }
 
-        setSession() {
+        static setSession() {
             const name = process.env.COOKIE_NAME!;
             let expires = "";
             const expirationDays = parseInt(process.env.COOKIE_EXPIRES_DAYS!)
             const expirationDate = new Date();
             expirationDate.setDate(expirationDate.getDate() + expirationDays);
             expires = `; expires=${expirationDate.toUTCString()}`;
-            const value = sign(this.serialize(),process.env.COOKIE_SECRET!);
-            setCookieHeader(name,value,expires)
+            const value = ServerSession.sign(ServerSession.serialize(),process.env.COOKIE_SECRET!);
+            document.cookie = `${name}=${value}${expires}; path=/`;
         }
 
-        serialize() {
-            const value = Buffer.from(JSON.stringify(this), "utf-8").toString("base64");
+        static serialize() {
+            const value = Buffer.from(JSON.stringify(ServerSession), "utf-8").toString("base64");
             const length = Buffer.byteLength(value);
             if (length > 4096) throw new Error("Session value is too long");
             return value;
         }
 
-        deserialize(value: string) {
+        static deserialize(value: string) {
             const deserializedObject = JSON.parse(Buffer.from(value, "base64").toString("utf-8"));
             const emptySession = new ServerSession();
             instance = Object.assign(emptySession, deserializedObject);
             return instance;
         }
 
-        sign(value: string, secret: string) {
+        static sign(value: string, secret: string) {
             return cookieSignature.sign(value, secret);
         }
 
-        unsign(value: string, secret: string) {
+        static unsign(value: string, secret: string) {
             return cookieSignature.unsign(value, secret);
         }
 
-        async getUserFromSession() {
-            const session = this.loadSession();
+        static async getUserFromSession() {
+            if (process.server) return null;
+            const session = ServerSession.loadSession();
 
             // Check if cookie was found
             if (!session) return null;
             return session?.user;
         }
 
-        loadSession(): BrowserSession | ServerSession | null {
-            const cookieHeader: CookieHeader = getCookieHeader();
-            const cookieArray = cookieHeader.headers.cookie?.split(';').reduce((cookies: any, cookie: any) => {
-                const [name, value] = cookie.split('=').map((part: any) => part.trim());
-                cookies[name] = value;
-                return cookies;
-            }, {});
+        static loadSession(): BrowserSession | ServerSession | null {
+            // const cookieHeader: CookieHeader = process.server ? (process as any).$nuxt.$cookies : null;
+            // const cookieArray = cookieHeader.headers.cookie?.split(';').reduce((cookies: any, cookie: any) => {
+            //     const [name, value] = cookie.split('=').map((part: any) => part.trim());
+            //     cookies[name] = value;
+            //     return cookies;
+            // }, {});
 
-            const nameEQ = process.env.COOKIE_NAME! + "=";
+            // const nameEQ = process.env.COOKIE_NAME! + "=";
             
             
-            for (let i = 0; i < cookieArray.length; i++) {
-                let cookie = cookieArray[i].trim();
+            // for (let i = 0; i < cookieArray.length; i++) {
+            //     let cookie = cookieArray[i].trim();
 
-                if (cookie.indexOf(nameEQ) === 0) {
-                    const cook = cookie.substring(nameEQ.length, cookie.length);
-                    const unsignedSession = unsign(cook, process.env.COOKIE_SECRET!);
-                    if (!unsignedSession) return null;
-                    const session = this.deserialize(unsignedSession);
-                    return session;
-                    //return cookie.substring(nameEQ.length, cookie.length);
-                }
-            }
+            //     if (cookie.indexOf(nameEQ) === 0) {
+            //         const cook = cookie.substring(nameEQ.length, cookie.length);
+            //         const unsignedSession = ServerSession.unsign(cook, process.env.COOKIE_SECRET!);
+            //         if (!unsignedSession) return null;
+            //         const session = ServerSession.deserialize(unsignedSession);
+            //         return session;
+            //         //return cookie.substring(nameEQ.length, cookie.length);
+            //     }
+            // }
 
-            return null;
+            // return null;
         }
 
-        data(key: any = null, value: any = null, defaultValue: any = null) {
-            if (!key && !value && !defaultValue) return this.sessionData;
-            if (key && !value && !defaultValue) return this.sessionData[key] || null;
-            if (key && value && !defaultValue) return this.sessionData[key] || value;
-            if (key && !value && defaultValue) return this.sessionData[key] || defaultValue;
+        static data(key: any = null, value: any = null, defaultValue: any = null) {
+            if (!key && !value && !defaultValue) return ServerSession.sessionData;
+            if (key && !value && !defaultValue) return ServerSession.sessionData[key] || null;
+            if (key && value && !defaultValue) return ServerSession.sessionData[key] || value;
+            if (key && !value && defaultValue) return ServerSession.sessionData[key] || defaultValue;
         }
     };
     if (process.server) {
